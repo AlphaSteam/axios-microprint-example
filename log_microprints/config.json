@@ -9,7 +9,7 @@
     "line_rules": [
         {
             "includes": [
-                "(?:^|\\W)FAILED(?:$|\\W)(?!code)"
+                "(?:^|\\W)FAILED(?!\\S)"
             ],
             "text_color": "white",
             "background_color": "red"

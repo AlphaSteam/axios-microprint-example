@@ -1,673 +1,675 @@
-2023-11-19T23:45:29.9173108Z Requested labels: ubuntu-latest
-2023-11-19T23:45:29.9173461Z Job defined at: AlphaSteam/axios-microprint-example/.github/workflows/ci.yml@refs/heads/microprint_test
-2023-11-19T23:45:29.9173609Z Waiting for a runner to pick up this job...
-2023-11-19T23:45:30.2640520Z Job is waiting for a hosted runner to come online.
-2023-11-19T23:45:33.3806368Z Job is about to start running on the hosted runner: GitHub Actions 3 (hosted)
-2023-11-19T23:45:35.3707128Z Current runner version: '2.311.0'
-2023-11-19T23:45:35.3730702Z ##[group]Operating System
-2023-11-19T23:45:35.3731477Z Ubuntu
-2023-11-19T23:45:35.3731786Z 22.04.3
-2023-11-19T23:45:35.3732125Z LTS
-2023-11-19T23:45:35.3732544Z ##[endgroup]
-2023-11-19T23:45:35.3732890Z ##[group]Runner Image
-2023-11-19T23:45:35.3733333Z Image: ubuntu-22.04
-2023-11-19T23:45:35.3733788Z Version: 20231030.2.0
-2023-11-19T23:45:35.3734771Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20231030.2/images/linux/Ubuntu2204-Readme.md
-2023-11-19T23:45:35.3736306Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20231030.2
-2023-11-19T23:45:35.3737262Z ##[endgroup]
-2023-11-19T23:45:35.3737654Z ##[group]Runner Image Provisioner
-2023-11-19T23:45:35.3738118Z 2.0.312.1
-2023-11-19T23:45:35.3738506Z ##[endgroup]
-2023-11-19T23:45:35.3739377Z ##[group]GITHUB_TOKEN Permissions
-2023-11-19T23:45:35.3740911Z Contents: read
-2023-11-19T23:45:35.3741405Z Metadata: read
-2023-11-19T23:45:35.3741995Z ##[endgroup]
-2023-11-19T23:45:35.3745534Z Secret source: Actions
-2023-11-19T23:45:35.3746107Z Prepare workflow directory
-2023-11-19T23:45:35.4368614Z Prepare all required actions
-2023-11-19T23:45:35.4531253Z Getting action download info
-2023-11-19T23:45:35.6073585Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
-2023-11-19T23:45:35.7140383Z Download action repository 'actions/setup-node@v3' (SHA:1a4442cacd436585916779262731d5b162bc6ec7)
-2023-11-19T23:45:35.9125993Z Complete job name: build (12.x)
-2023-11-19T23:45:36.0282934Z ##[group]Run actions/checkout@v3
-2023-11-19T23:45:36.0283534Z with:
-2023-11-19T23:45:36.0284055Z   persist-credentials: false
-2023-11-19T23:45:36.0284625Z   repository: AlphaSteam/axios-microprint-example
-2023-11-19T23:45:36.0285458Z   token: ***
-2023-11-19T23:45:36.0285942Z   ssh-strict: true
-2023-11-19T23:45:36.0286312Z   clean: true
-2023-11-19T23:45:36.0286737Z   sparse-checkout-cone-mode: true
-2023-11-19T23:45:36.0287345Z   fetch-depth: 1
-2023-11-19T23:45:36.0287714Z   fetch-tags: false
-2023-11-19T23:45:36.0288115Z   lfs: false
-2023-11-19T23:45:36.0288547Z   submodules: false
-2023-11-19T23:45:36.0288921Z   set-safe-directory: true
-2023-11-19T23:45:36.0289381Z ##[endgroup]
-2023-11-19T23:45:36.1927504Z Syncing repository: AlphaSteam/axios-microprint-example
-2023-11-19T23:45:36.1930540Z ##[group]Getting Git version info
-2023-11-19T23:45:36.1932356Z Working directory is '/home/runner/work/axios-microprint-example/axios-microprint-example'
-2023-11-19T23:45:36.1934826Z [command]/usr/bin/git version
-2023-11-19T23:45:36.1935620Z git version 2.42.0
-2023-11-19T23:45:36.1938805Z ##[endgroup]
-2023-11-19T23:45:36.1956635Z Temporarily overriding HOME='/home/runner/work/_temp/3ddf98ad-0e65-417b-a9e3-e7e6dc15cc45' before making global git config changes
-2023-11-19T23:45:36.1959159Z Adding repository directory to the temporary git global config as a safe directory
-2023-11-19T23:45:36.1961703Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/axios-microprint-example/axios-microprint-example
-2023-11-19T23:45:36.2000733Z Deleting the contents of '/home/runner/work/axios-microprint-example/axios-microprint-example'
-2023-11-19T23:45:36.2004860Z ##[group]Initializing the repository
-2023-11-19T23:45:36.2009040Z [command]/usr/bin/git init /home/runner/work/axios-microprint-example/axios-microprint-example
-2023-11-19T23:45:36.2069231Z hint: Using 'master' as the name for the initial branch. This default branch name
-2023-11-19T23:45:36.2070789Z hint: is subject to change. To configure the initial branch name to use in all
-2023-11-19T23:45:36.2072266Z hint: of your new repositories, which will suppress this warning, call:
-2023-11-19T23:45:36.2073263Z hint: 
-2023-11-19T23:45:36.2074059Z hint: 	git config --global init.defaultBranch <name>
-2023-11-19T23:45:36.2074800Z hint: 
-2023-11-19T23:45:36.2075566Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-2023-11-19T23:45:36.2076948Z hint: 'development'. The just-created branch can be renamed via this command:
-2023-11-19T23:45:36.2078134Z hint: 
-2023-11-19T23:45:36.2078507Z hint: 	git branch -m <name>
-2023-11-19T23:45:36.2079624Z Initialized empty Git repository in /home/runner/work/axios-microprint-example/axios-microprint-example/.git/
-2023-11-19T23:45:36.2085679Z [command]/usr/bin/git remote add origin https://github.com/AlphaSteam/axios-microprint-example
-2023-11-19T23:45:36.2126298Z ##[endgroup]
-2023-11-19T23:45:36.2127047Z ##[group]Disabling automatic garbage collection
-2023-11-19T23:45:36.2129533Z [command]/usr/bin/git config --local gc.auto 0
-2023-11-19T23:45:36.2165617Z ##[endgroup]
-2023-11-19T23:45:36.2166454Z ##[group]Setting up auth
-2023-11-19T23:45:36.2171648Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2023-11-19T23:45:36.2209066Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2023-11-19T23:45:36.2503010Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2023-11-19T23:45:36.2539492Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2023-11-19T23:45:36.2782317Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2023-11-19T23:45:36.2825279Z ##[endgroup]
-2023-11-19T23:45:36.2826503Z ##[group]Fetching the repository
-2023-11-19T23:45:36.2836508Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +2fec34afc2595046becf855557f7b8b787a38172:refs/remotes/origin/microprint_test
-2023-11-19T23:45:36.5126160Z remote: Enumerating objects: 277, done.        
-2023-11-19T23:45:36.5127633Z remote: Counting objects:   0% (1/277)        
-2023-11-19T23:45:36.5128496Z remote: Counting objects:   1% (3/277)        
-2023-11-19T23:45:36.5129379Z remote: Counting objects:   2% (6/277)        
-2023-11-19T23:45:36.5130250Z remote: Counting objects:   3% (9/277)        
-2023-11-19T23:45:36.5131115Z remote: Counting objects:   4% (12/277)        
-2023-11-19T23:45:36.5131989Z remote: Counting objects:   5% (14/277)        
-2023-11-19T23:45:36.5132853Z remote: Counting objects:   6% (17/277)        
-2023-11-19T23:45:36.5133904Z remote: Counting objects:   7% (20/277)        
-2023-11-19T23:45:36.5135438Z remote: Counting objects:   8% (23/277)        
-2023-11-19T23:45:36.5136967Z remote: Counting objects:   9% (25/277)        
-2023-11-19T23:45:36.5138413Z remote: Counting objects:  10% (28/277)        
-2023-11-19T23:45:36.5139892Z remote: Counting objects:  11% (31/277)        
-2023-11-19T23:45:36.5140724Z remote: Counting objects:  12% (34/277)        
-2023-11-19T23:45:36.5141570Z remote: Counting objects:  13% (37/277)        
-2023-11-19T23:45:36.5142368Z remote: Counting objects:  14% (39/277)        
-2023-11-19T23:45:36.5143025Z remote: Counting objects:  15% (42/277)        
-2023-11-19T23:45:36.5143640Z remote: Counting objects:  16% (45/277)        
-2023-11-19T23:45:36.5144371Z remote: Counting objects:  17% (48/277)        
-2023-11-19T23:45:36.5145012Z remote: Counting objects:  18% (50/277)        
-2023-11-19T23:45:36.5145640Z remote: Counting objects:  19% (53/277)        
-2023-11-19T23:45:36.5146297Z remote: Counting objects:  20% (56/277)        
-2023-11-19T23:45:36.5146955Z remote: Counting objects:  21% (59/277)        
-2023-11-19T23:45:36.5147590Z remote: Counting objects:  22% (61/277)        
-2023-11-19T23:45:36.5148266Z remote: Counting objects:  23% (64/277)        
-2023-11-19T23:45:36.5148918Z remote: Counting objects:  24% (67/277)        
-2023-11-19T23:45:36.5149549Z remote: Counting objects:  25% (70/277)        
-2023-11-19T23:45:36.5150517Z remote: Counting objects:  26% (73/277)        
-2023-11-19T23:45:36.5151240Z remote: Counting objects:  27% (75/277)        
-2023-11-19T23:45:36.5152220Z remote: Counting objects:  28% (78/277)        
-2023-11-19T23:45:36.5152924Z remote: Counting objects:  29% (81/277)        
-2023-11-19T23:45:36.5153556Z remote: Counting objects:  30% (84/277)        
-2023-11-19T23:45:36.5154171Z remote: Counting objects:  31% (86/277)        
-2023-11-19T23:45:36.5154858Z remote: Counting objects:  32% (89/277)        
-2023-11-19T23:45:36.5155676Z remote: Counting objects:  33% (92/277)        
-2023-11-19T23:45:36.5156523Z remote: Counting objects:  34% (95/277)        
-2023-11-19T23:45:36.5157604Z remote: Counting objects:  35% (97/277)        
-2023-11-19T23:45:36.5158368Z remote: Counting objects:  36% (100/277)        
-2023-11-19T23:45:36.5159028Z remote: Counting objects:  37% (103/277)        
-2023-11-19T23:45:36.5159704Z remote: Counting objects:  38% (106/277)        
-2023-11-19T23:45:36.5160366Z remote: Counting objects:  39% (109/277)        
-2023-11-19T23:45:36.5161020Z remote: Counting objects:  40% (111/277)        
-2023-11-19T23:45:36.5161724Z remote: Counting objects:  41% (114/277)        
-2023-11-19T23:45:36.5162324Z remote: Counting objects:  42% (117/277)        
-2023-11-19T23:45:36.5162976Z remote: Counting objects:  43% (120/277)        
-2023-11-19T23:45:36.5163669Z remote: Counting objects:  44% (122/277)        
-2023-11-19T23:45:36.5164260Z remote: Counting objects:  45% (125/277)        
-2023-11-19T23:45:36.5164900Z remote: Counting objects:  46% (128/277)        
-2023-11-19T23:45:36.5165591Z remote: Counting objects:  47% (131/277)        
-2023-11-19T23:45:36.5166402Z remote: Counting objects:  48% (133/277)        
-2023-11-19T23:45:36.5167047Z remote: Counting objects:  49% (136/277)        
-2023-11-19T23:45:36.5167751Z remote: Counting objects:  50% (139/277)        
-2023-11-19T23:45:36.5168388Z remote: Counting objects:  51% (142/277)        
-2023-11-19T23:45:36.5169020Z remote: Counting objects:  52% (145/277)        
-2023-11-19T23:45:36.5169704Z remote: Counting objects:  53% (147/277)        
-2023-11-19T23:45:36.5170311Z remote: Counting objects:  54% (150/277)        
-2023-11-19T23:45:36.5170940Z remote: Counting objects:  55% (153/277)        
-2023-11-19T23:45:36.5171630Z remote: Counting objects:  56% (156/277)        
-2023-11-19T23:45:36.5172442Z remote: Counting objects:  57% (158/277)        
-2023-11-19T23:45:36.5173243Z remote: Counting objects:  58% (161/277)        
-2023-11-19T23:45:36.5174256Z remote: Counting objects:  59% (164/277)        
-2023-11-19T23:45:36.5175107Z remote: Counting objects:  60% (167/277)        
-2023-11-19T23:45:36.5175956Z remote: Counting objects:  61% (169/277)        
-2023-11-19T23:45:36.5177308Z remote: Counting objects:  62% (172/277)        
-2023-11-19T23:45:36.5178393Z remote: Counting objects:  63% (175/277)        
-2023-11-19T23:45:36.5179468Z remote: Counting objects:  64% (178/277)        
-2023-11-19T23:45:36.5180246Z remote: Counting objects:  65% (181/277)        
-2023-11-19T23:45:36.5180979Z remote: Counting objects:  66% (183/277)        
-2023-11-19T23:45:36.5181776Z remote: Counting objects:  67% (186/277)        
-2023-11-19T23:45:36.5182904Z remote: Counting objects:  68% (189/277)        
-2023-11-19T23:45:36.5183571Z remote: Counting objects:  69% (192/277)        
-2023-11-19T23:45:36.5184552Z remote: Counting objects:  70% (194/277)        
-2023-11-19T23:45:36.5185611Z remote: Counting objects:  71% (197/277)        
-2023-11-19T23:45:36.5186533Z remote: Counting objects:  72% (200/277)        
-2023-11-19T23:45:36.5187427Z remote: Counting objects:  73% (203/277)        
-2023-11-19T23:45:36.5188163Z remote: Counting objects:  74% (205/277)        
-2023-11-19T23:45:36.5188793Z remote: Counting objects:  75% (208/277)        
-2023-11-19T23:45:36.5189442Z remote: Counting objects:  76% (211/277)        
-2023-11-19T23:45:36.5190601Z remote: Counting objects:  77% (214/277)        
-2023-11-19T23:45:36.5191367Z remote: Counting objects:  78% (217/277)        
-2023-11-19T23:45:36.5192035Z remote: Counting objects:  79% (219/277)        
-2023-11-19T23:45:36.5192726Z remote: Counting objects:  80% (222/277)        
-2023-11-19T23:45:36.5193579Z remote: Counting objects:  81% (225/277)        
-2023-11-19T23:45:36.5194203Z remote: Counting objects:  82% (228/277)        
-2023-11-19T23:45:36.5194872Z remote: Counting objects:  83% (230/277)        
-2023-11-19T23:45:36.5195516Z remote: Counting objects:  84% (233/277)        
-2023-11-19T23:45:36.5196160Z remote: Counting objects:  85% (236/277)        
-2023-11-19T23:45:36.5196815Z remote: Counting objects:  86% (239/277)        
-2023-11-19T23:45:36.5197460Z remote: Counting objects:  87% (241/277)        
-2023-11-19T23:45:36.5198084Z remote: Counting objects:  88% (244/277)        
-2023-11-19T23:45:36.5198737Z remote: Counting objects:  89% (247/277)        
-2023-11-19T23:45:36.5199375Z remote: Counting objects:  90% (250/277)        
-2023-11-19T23:45:36.5199993Z remote: Counting objects:  91% (253/277)        
-2023-11-19T23:45:36.5200751Z remote: Counting objects:  92% (255/277)        
-2023-11-19T23:45:36.5201334Z remote: Counting objects:  93% (258/277)        
-2023-11-19T23:45:36.5201957Z remote: Counting objects:  94% (261/277)        
-2023-11-19T23:45:36.5202667Z remote: Counting objects:  95% (264/277)        
-2023-11-19T23:45:36.5203249Z remote: Counting objects:  96% (266/277)        
-2023-11-19T23:45:36.5203886Z remote: Counting objects:  97% (269/277)        
-2023-11-19T23:45:36.5204585Z remote: Counting objects:  98% (272/277)        
-2023-11-19T23:45:36.5205169Z remote: Counting objects:  99% (275/277)        
-2023-11-19T23:45:36.5205782Z remote: Counting objects: 100% (277/277)        
-2023-11-19T23:45:36.5206701Z remote: Counting objects: 100% (277/277), done.        
-2023-11-19T23:45:36.5207393Z remote: Compressing objects:   0% (1/254)        
-2023-11-19T23:45:36.5208076Z remote: Compressing objects:   1% (3/254)        
-2023-11-19T23:45:36.5208828Z remote: Compressing objects:   2% (6/254)        
-2023-11-19T23:45:36.5209450Z remote: Compressing objects:   3% (8/254)        
-2023-11-19T23:45:36.5210132Z remote: Compressing objects:   4% (11/254)        
-2023-11-19T23:45:36.5210883Z remote: Compressing objects:   5% (13/254)        
-2023-11-19T23:45:36.5211517Z remote: Compressing objects:   6% (16/254)        
-2023-11-19T23:45:36.5212221Z remote: Compressing objects:   7% (18/254)        
-2023-11-19T23:45:36.5212953Z remote: Compressing objects:   8% (21/254)        
-2023-11-19T23:45:36.5213616Z remote: Compressing objects:   9% (23/254)        
-2023-11-19T23:45:36.5214260Z remote: Compressing objects:  10% (26/254)        
-2023-11-19T23:45:36.5214989Z remote: Compressing objects:  11% (28/254)        
-2023-11-19T23:45:36.5215884Z remote: Compressing objects:  12% (31/254)        
-2023-11-19T23:45:36.5216864Z remote: Compressing objects:  13% (34/254)        
-2023-11-19T23:45:36.5217656Z remote: Compressing objects:  14% (36/254)        
-2023-11-19T23:45:36.5218350Z remote: Compressing objects:  15% (39/254)        
-2023-11-19T23:45:36.5221817Z remote: Compressing objects:  16% (41/254)        
-2023-11-19T23:45:36.5222651Z remote: Compressing objects:  17% (44/254)        
-2023-11-19T23:45:36.5226352Z remote: Compressing objects:  18% (46/254)        
-2023-11-19T23:45:36.5227831Z remote: Compressing objects:  19% (49/254)        
-2023-11-19T23:45:36.5238985Z remote: Compressing objects:  20% (51/254)        
-2023-11-19T23:45:36.5240283Z remote: Compressing objects:  21% (54/254)        
-2023-11-19T23:45:36.5248420Z remote: Compressing objects:  22% (56/254)        
-2023-11-19T23:45:36.5265197Z remote: Compressing objects:  23% (59/254)        
-2023-11-19T23:45:36.5266809Z remote: Compressing objects:  24% (61/254)        
-2023-11-19T23:45:36.5268421Z remote: Compressing objects:  25% (64/254)        
-2023-11-19T23:45:36.5270012Z remote: Compressing objects:  26% (67/254)        
-2023-11-19T23:45:36.5272362Z remote: Compressing objects:  27% (69/254)        
-2023-11-19T23:45:36.5273745Z remote: Compressing objects:  28% (72/254)        
-2023-11-19T23:45:36.5275393Z remote: Compressing objects:  29% (74/254)        
-2023-11-19T23:45:36.5287398Z remote: Compressing objects:  30% (77/254)        
-2023-11-19T23:45:36.5289307Z remote: Compressing objects:  31% (79/254)        
-2023-11-19T23:45:36.5292243Z remote: Compressing objects:  32% (82/254)        
-2023-11-19T23:45:36.5293691Z remote: Compressing objects:  33% (84/254)        
-2023-11-19T23:45:36.5294722Z remote: Compressing objects:  34% (87/254)        
-2023-11-19T23:45:36.5296278Z remote: Compressing objects:  35% (89/254)        
-2023-11-19T23:45:36.5297348Z remote: Compressing objects:  36% (92/254)        
-2023-11-19T23:45:36.5299650Z remote: Compressing objects:  37% (94/254)        
-2023-11-19T23:45:36.5305157Z remote: Compressing objects:  38% (97/254)        
-2023-11-19T23:45:36.5306015Z remote: Compressing objects:  39% (100/254)        
-2023-11-19T23:45:36.5306793Z remote: Compressing objects:  40% (102/254)        
-2023-11-19T23:45:36.5307580Z remote: Compressing objects:  41% (105/254)        
-2023-11-19T23:45:36.5308318Z remote: Compressing objects:  42% (107/254)        
-2023-11-19T23:45:36.5311293Z remote: Compressing objects:  43% (110/254)        
-2023-11-19T23:45:36.5316939Z remote: Compressing objects:  44% (112/254)        
-2023-11-19T23:45:36.5321246Z remote: Compressing objects:  45% (115/254)        
-2023-11-19T23:45:36.5324072Z remote: Compressing objects:  46% (117/254)        
-2023-11-19T23:45:36.5326913Z remote: Compressing objects:  47% (120/254)        
-2023-11-19T23:45:36.5328414Z remote: Compressing objects:  48% (122/254)        
-2023-11-19T23:45:36.5331764Z remote: Compressing objects:  49% (125/254)        
-2023-11-19T23:45:36.5335651Z remote: Compressing objects:  50% (127/254)        
-2023-11-19T23:45:36.5338245Z remote: Compressing objects:  51% (130/254)        
-2023-11-19T23:45:36.5340324Z remote: Compressing objects:  52% (133/254)        
-2023-11-19T23:45:36.5344932Z remote: Compressing objects:  53% (135/254)        
-2023-11-19T23:45:36.5352272Z remote: Compressing objects:  54% (138/254)        
-2023-11-19T23:45:36.5353366Z remote: Compressing objects:  55% (140/254)        
-2023-11-19T23:45:36.5354307Z remote: Compressing objects:  56% (143/254)        
-2023-11-19T23:45:36.5356483Z remote: Compressing objects:  57% (145/254)        
-2023-11-19T23:45:36.5357582Z remote: Compressing objects:  58% (148/254)        
-2023-11-19T23:45:36.5359519Z remote: Compressing objects:  59% (150/254)        
-2023-11-19T23:45:36.5361932Z remote: Compressing objects:  60% (153/254)        
-2023-11-19T23:45:36.5363264Z remote: Compressing objects:  61% (155/254)        
-2023-11-19T23:45:36.5365266Z remote: Compressing objects:  62% (158/254)        
-2023-11-19T23:45:36.5369671Z remote: Compressing objects:  63% (161/254)        
-2023-11-19T23:45:36.5374224Z remote: Compressing objects:  64% (163/254)        
-2023-11-19T23:45:36.5378964Z remote: Compressing objects:  65% (166/254)        
-2023-11-19T23:45:36.5488219Z remote: Compressing objects:  66% (168/254)        
-2023-11-19T23:45:36.5552210Z remote: Compressing objects:  67% (171/254)        
-2023-11-19T23:45:36.5598650Z remote: Compressing objects:  68% (173/254)        
-2023-11-19T23:45:36.5600411Z remote: Compressing objects:  69% (176/254)        
-2023-11-19T23:45:36.5602172Z remote: Compressing objects:  70% (178/254)        
-2023-11-19T23:45:36.5603330Z remote: Compressing objects:  71% (181/254)        
-2023-11-19T23:45:36.5604530Z remote: Compressing objects:  72% (183/254)        
-2023-11-19T23:45:36.5605909Z remote: Compressing objects:  73% (186/254)        
-2023-11-19T23:45:36.5607395Z remote: Compressing objects:  74% (188/254)        
-2023-11-19T23:45:36.5608496Z remote: Compressing objects:  75% (191/254)        
-2023-11-19T23:45:36.5609446Z remote: Compressing objects:  76% (194/254)        
-2023-11-19T23:45:36.5612635Z remote: Compressing objects:  77% (196/254)        
-2023-11-19T23:45:36.5614294Z remote: Compressing objects:  78% (199/254)        
-2023-11-19T23:45:36.5622158Z remote: Compressing objects:  79% (201/254)        
-2023-11-19T23:45:36.5628375Z remote: Compressing objects:  80% (204/254)        
-2023-11-19T23:45:36.5629503Z remote: Compressing objects:  81% (206/254)        
-2023-11-19T23:45:36.5637138Z remote: Compressing objects:  82% (209/254)        
-2023-11-19T23:45:36.5638262Z remote: Compressing objects:  83% (211/254)        
-2023-11-19T23:45:36.5639092Z remote: Compressing objects:  84% (214/254)        
-2023-11-19T23:45:36.5639810Z remote: Compressing objects:  85% (216/254)        
-2023-11-19T23:45:36.5640502Z remote: Compressing objects:  86% (219/254)        
-2023-11-19T23:45:36.5641224Z remote: Compressing objects:  87% (221/254)        
-2023-11-19T23:45:36.5641972Z remote: Compressing objects:  88% (224/254)        
-2023-11-19T23:45:36.5642687Z remote: Compressing objects:  89% (227/254)        
-2023-11-19T23:45:36.5643462Z remote: Compressing objects:  90% (229/254)        
-2023-11-19T23:45:36.5644165Z remote: Compressing objects:  91% (232/254)        
-2023-11-19T23:45:36.5644813Z remote: Compressing objects:  92% (234/254)        
-2023-11-19T23:45:36.5645570Z remote: Compressing objects:  93% (237/254)        
-2023-11-19T23:45:36.5646248Z remote: Compressing objects:  94% (239/254)        
-2023-11-19T23:45:36.5646881Z remote: Compressing objects:  95% (242/254)        
-2023-11-19T23:45:36.5647638Z remote: Compressing objects:  96% (244/254)        
-2023-11-19T23:45:36.5648314Z remote: Compressing objects:  97% (247/254)        
-2023-11-19T23:45:36.5649043Z remote: Compressing objects:  98% (249/254)        
-2023-11-19T23:45:36.5650120Z remote: Compressing objects:  99% (252/254)        
-2023-11-19T23:45:36.5651047Z remote: Compressing objects: 100% (254/254)        
-2023-11-19T23:45:36.5652252Z remote: Compressing objects: 100% (254/254), done.        
-2023-11-19T23:45:36.5676278Z Receiving objects:   0% (1/277)
-2023-11-19T23:45:36.5677474Z Receiving objects:   1% (3/277)
-2023-11-19T23:45:36.5678627Z Receiving objects:   2% (6/277)
-2023-11-19T23:45:36.5680341Z Receiving objects:   3% (9/277)
-2023-11-19T23:45:36.5681076Z Receiving objects:   4% (12/277)
-2023-11-19T23:45:36.5681878Z Receiving objects:   5% (14/277)
-2023-11-19T23:45:36.5682428Z Receiving objects:   6% (17/277)
-2023-11-19T23:45:36.5682945Z Receiving objects:   7% (20/277)
-2023-11-19T23:45:36.5684843Z Receiving objects:   8% (23/277)
-2023-11-19T23:45:36.5706784Z Receiving objects:   9% (25/277)
-2023-11-19T23:45:36.5707462Z Receiving objects:  10% (28/277)
-2023-11-19T23:45:36.5739689Z Receiving objects:  11% (31/277)
-2023-11-19T23:45:36.5741459Z Receiving objects:  12% (34/277)
-2023-11-19T23:45:36.5742379Z Receiving objects:  13% (37/277)
-2023-11-19T23:45:36.5745861Z Receiving objects:  14% (39/277)
-2023-11-19T23:45:36.5799218Z Receiving objects:  15% (42/277)
-2023-11-19T23:45:36.5948799Z Receiving objects:  16% (45/277)
-2023-11-19T23:45:36.5958065Z Receiving objects:  17% (48/277)
-2023-11-19T23:45:36.6010956Z Receiving objects:  18% (50/277)
-2023-11-19T23:45:36.6054825Z Receiving objects:  19% (53/277)
-2023-11-19T23:45:36.6106647Z Receiving objects:  20% (56/277)
-2023-11-19T23:45:36.6107941Z Receiving objects:  21% (59/277)
-2023-11-19T23:45:36.6108719Z Receiving objects:  22% (61/277)
-2023-11-19T23:45:36.6109336Z Receiving objects:  23% (64/277)
-2023-11-19T23:45:36.6121754Z Receiving objects:  24% (67/277)
-2023-11-19T23:45:36.6122782Z Receiving objects:  25% (70/277)
-2023-11-19T23:45:36.6123922Z Receiving objects:  26% (73/277)
-2023-11-19T23:45:36.6124884Z Receiving objects:  27% (75/277)
-2023-11-19T23:45:36.6125618Z Receiving objects:  28% (78/277)
-2023-11-19T23:45:36.6127370Z Receiving objects:  29% (81/277)
-2023-11-19T23:45:36.6128353Z Receiving objects:  30% (84/277)
-2023-11-19T23:45:36.6129417Z Receiving objects:  31% (86/277)
-2023-11-19T23:45:36.6161218Z Receiving objects:  32% (89/277)
-2023-11-19T23:45:36.6162337Z Receiving objects:  33% (92/277)
-2023-11-19T23:45:36.6163262Z Receiving objects:  34% (95/277)
-2023-11-19T23:45:36.6164355Z Receiving objects:  35% (97/277)
-2023-11-19T23:45:36.6165302Z Receiving objects:  36% (100/277)
-2023-11-19T23:45:36.6175266Z Receiving objects:  37% (103/277)
-2023-11-19T23:45:36.6177118Z Receiving objects:  38% (106/277)
-2023-11-19T23:45:36.6178466Z Receiving objects:  39% (109/277)
-2023-11-19T23:45:36.6179359Z Receiving objects:  40% (111/277)
-2023-11-19T23:45:36.6180383Z Receiving objects:  41% (114/277)
-2023-11-19T23:45:36.6181228Z Receiving objects:  42% (117/277)
-2023-11-19T23:45:36.6182079Z Receiving objects:  43% (120/277)
-2023-11-19T23:45:36.6182904Z Receiving objects:  44% (122/277)
-2023-11-19T23:45:36.6183485Z Receiving objects:  45% (125/277)
-2023-11-19T23:45:36.6183977Z Receiving objects:  46% (128/277)
-2023-11-19T23:45:36.6184607Z Receiving objects:  47% (131/277)
-2023-11-19T23:45:36.6185128Z Receiving objects:  48% (133/277)
-2023-11-19T23:45:36.6570062Z Receiving objects:  49% (136/277)
-2023-11-19T23:45:36.6571895Z Receiving objects:  50% (139/277)
-2023-11-19T23:45:36.6573553Z Receiving objects:  51% (142/277)
-2023-11-19T23:45:36.6574831Z Receiving objects:  52% (145/277)
-2023-11-19T23:45:36.6575881Z Receiving objects:  53% (147/277)
-2023-11-19T23:45:36.6576622Z Receiving objects:  54% (150/277)
-2023-11-19T23:45:36.6577371Z Receiving objects:  55% (153/277)
-2023-11-19T23:45:36.6578109Z Receiving objects:  56% (156/277)
-2023-11-19T23:45:36.7013660Z Receiving objects:  57% (158/277)
-2023-11-19T23:45:36.7014957Z Receiving objects:  58% (161/277)
-2023-11-19T23:45:36.7015830Z Receiving objects:  59% (164/277)
-2023-11-19T23:45:36.7016570Z Receiving objects:  60% (167/277)
-2023-11-19T23:45:36.7017536Z Receiving objects:  61% (169/277)
-2023-11-19T23:45:36.7017981Z Receiving objects:  62% (172/277)
-2023-11-19T23:45:36.7018722Z Receiving objects:  63% (175/277)
-2023-11-19T23:45:36.7019314Z Receiving objects:  64% (178/277)
-2023-11-19T23:45:36.7019760Z Receiving objects:  65% (181/277)
-2023-11-19T23:45:36.7020142Z Receiving objects:  66% (183/277)
-2023-11-19T23:45:36.7020649Z Receiving objects:  67% (186/277)
-2023-11-19T23:45:36.7055278Z Receiving objects:  68% (189/277)
-2023-11-19T23:45:36.7056118Z Receiving objects:  69% (192/277)
-2023-11-19T23:45:36.7057086Z Receiving objects:  70% (194/277)
-2023-11-19T23:45:36.7057940Z Receiving objects:  71% (197/277)
-2023-11-19T23:45:36.7059397Z remote: Total 277 (delta 28), reused 106 (delta 8), pack-reused 0        
-2023-11-19T23:45:36.7060778Z Receiving objects:  72% (200/277)
-2023-11-19T23:45:36.7061628Z Receiving objects:  73% (203/277)
-2023-11-19T23:45:36.7062389Z Receiving objects:  74% (205/277)
-2023-11-19T23:45:36.7063299Z Receiving objects:  75% (208/277)
-2023-11-19T23:45:36.7064157Z Receiving objects:  76% (211/277)
-2023-11-19T23:45:36.7065021Z Receiving objects:  77% (214/277)
-2023-11-19T23:45:36.7066113Z Receiving objects:  78% (217/277)
-2023-11-19T23:45:36.7066799Z Receiving objects:  79% (219/277)
-2023-11-19T23:45:36.7067402Z Receiving objects:  80% (222/277)
-2023-11-19T23:45:36.7068245Z Receiving objects:  81% (225/277)
-2023-11-19T23:45:36.7069012Z Receiving objects:  82% (228/277)
-2023-11-19T23:45:36.7069639Z Receiving objects:  83% (230/277)
-2023-11-19T23:45:36.7070674Z Receiving objects:  84% (233/277)
-2023-11-19T23:45:36.7071383Z Receiving objects:  85% (236/277)
-2023-11-19T23:45:36.7071996Z Receiving objects:  86% (239/277)
-2023-11-19T23:45:36.7072890Z Receiving objects:  87% (241/277)
-2023-11-19T23:45:36.7073589Z Receiving objects:  88% (244/277)
-2023-11-19T23:45:36.7074272Z Receiving objects:  89% (247/277)
-2023-11-19T23:45:36.7074985Z Receiving objects:  90% (250/277)
-2023-11-19T23:45:36.7075619Z Receiving objects:  91% (253/277)
-2023-11-19T23:45:36.7076294Z Receiving objects:  92% (255/277)
-2023-11-19T23:45:36.7078917Z Receiving objects:  93% (258/277)
-2023-11-19T23:45:36.7080418Z Receiving objects:  94% (261/277)
-2023-11-19T23:45:36.7081175Z Receiving objects:  95% (264/277)
-2023-11-19T23:45:36.7081965Z Receiving objects:  96% (266/277)
-2023-11-19T23:45:36.7083900Z Receiving objects:  97% (269/277)
-2023-11-19T23:45:36.7084649Z Receiving objects:  98% (272/277)
-2023-11-19T23:45:36.7085536Z Receiving objects:  99% (275/277)
-2023-11-19T23:45:36.7086278Z Receiving objects: 100% (277/277)
-2023-11-19T23:45:36.7087182Z Receiving objects: 100% (277/277), 774.89 KiB | 5.38 MiB/s, done.
-2023-11-19T23:45:36.7088586Z Resolving deltas:   0% (0/28)
-2023-11-19T23:45:36.7089272Z Resolving deltas:   3% (1/28)
-2023-11-19T23:45:36.7089916Z Resolving deltas:   7% (2/28)
-2023-11-19T23:45:36.7106597Z Resolving deltas:  10% (3/28)
-2023-11-19T23:45:36.7108610Z Resolving deltas:  14% (4/28)
-2023-11-19T23:45:36.7110871Z Resolving deltas:  21% (6/28)
-2023-11-19T23:45:36.7119017Z Resolving deltas:  25% (7/28)
-2023-11-19T23:45:36.7119988Z Resolving deltas:  28% (8/28)
-2023-11-19T23:45:36.7120941Z Resolving deltas:  32% (9/28)
-2023-11-19T23:45:36.7121883Z Resolving deltas:  35% (10/28)
-2023-11-19T23:45:36.7122990Z Resolving deltas:  39% (11/28)
-2023-11-19T23:45:36.7124141Z Resolving deltas:  42% (12/28)
-2023-11-19T23:45:36.7124860Z Resolving deltas:  46% (13/28)
-2023-11-19T23:45:36.7125941Z Resolving deltas:  53% (15/28)
-2023-11-19T23:45:36.7127055Z Resolving deltas:  57% (16/28)
-2023-11-19T23:45:36.7128078Z Resolving deltas:  60% (17/28)
-2023-11-19T23:45:36.7128929Z Resolving deltas:  64% (18/28)
-2023-11-19T23:45:36.7129804Z Resolving deltas:  67% (19/28)
-2023-11-19T23:45:36.7130514Z Resolving deltas:  71% (20/28)
-2023-11-19T23:45:36.7131385Z Resolving deltas:  75% (21/28)
-2023-11-19T23:45:36.7132251Z Resolving deltas:  78% (22/28)
-2023-11-19T23:45:36.7133118Z Resolving deltas:  82% (23/28)
-2023-11-19T23:45:36.7135320Z Resolving deltas:  85% (24/28)
-2023-11-19T23:45:36.7136170Z Resolving deltas:  89% (25/28)
-2023-11-19T23:45:36.7139468Z Resolving deltas:  92% (26/28)
-2023-11-19T23:45:36.7145413Z Resolving deltas:  96% (27/28)
-2023-11-19T23:45:36.7146572Z Resolving deltas: 100% (28/28)
-2023-11-19T23:45:36.7147290Z Resolving deltas: 100% (28/28), done.
-2023-11-19T23:45:36.7216528Z From https://github.com/AlphaSteam/axios-microprint-example
-2023-11-19T23:45:36.7217658Z  * [new ref]         2fec34afc2595046becf855557f7b8b787a38172 -> origin/microprint_test
-2023-11-19T23:45:36.7241031Z ##[endgroup]
-2023-11-19T23:45:36.7242289Z ##[group]Determining the checkout info
-2023-11-19T23:45:36.7244118Z ##[endgroup]
-2023-11-19T23:45:36.7245148Z ##[group]Checking out the ref
-2023-11-19T23:45:36.7249935Z [command]/usr/bin/git checkout --progress --force -B microprint_test refs/remotes/origin/microprint_test
-2023-11-19T23:45:36.7530507Z Switched to a new branch 'microprint_test'
-2023-11-19T23:45:36.7531741Z branch 'microprint_test' set up to track 'origin/microprint_test'.
-2023-11-19T23:45:36.7539460Z ##[endgroup]
-2023-11-19T23:45:36.7583802Z [command]/usr/bin/git log -1 --format='%H'
-2023-11-19T23:45:36.7616085Z '2fec34afc2595046becf855557f7b8b787a38172'
-2023-11-19T23:45:36.7624765Z ##[group]Removing auth
-2023-11-19T23:45:36.7628866Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2023-11-19T23:45:36.7666401Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2023-11-19T23:45:36.7913189Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2023-11-19T23:45:36.7941906Z http.https://github.com/.extraheader
-2023-11-19T23:45:36.7951151Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2023-11-19T23:45:36.7991390Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2023-11-19T23:45:36.8224988Z ##[endgroup]
-2023-11-19T23:45:36.8528828Z ##[group]Run actions/setup-node@v3
-2023-11-19T23:45:36.8529433Z with:
-2023-11-19T23:45:36.8529748Z   node-version: 12.x
-2023-11-19T23:45:36.8530121Z   cache: npm
-2023-11-19T23:45:36.8530536Z   always-auth: false
-2023-11-19T23:45:36.8530880Z   check-latest: false
-2023-11-19T23:45:36.8531396Z   token: ***
-2023-11-19T23:45:36.8531806Z ##[endgroup]
-2023-11-19T23:45:37.0567017Z Attempting to download 12.x...
-2023-11-19T23:45:37.4025440Z Acquiring 12.22.12 - x64 from https://github.com/actions/node-versions/releases/download/12.22.12-2103540415/node-12.22.12-linux-x64.tar.gz
-2023-11-19T23:45:37.7222713Z Extracting ...
-2023-11-19T23:45:37.7352465Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword -C /home/runner/work/_temp/daf5ae9a-4af5-4ef6-96cf-270ddd7ade5d -f /home/runner/work/_temp/525d633e-2f2b-4898-be22-356e7597bdfd
-2023-11-19T23:45:38.2754131Z Adding to the cache ...
-2023-11-19T23:45:39.7485492Z ##[group]Environment details
-2023-11-19T23:45:39.9808920Z node: v12.22.12
-2023-11-19T23:45:39.9809611Z npm: 6.14.16
-2023-11-19T23:45:39.9810972Z yarn: 1.22.19
-2023-11-19T23:45:39.9812187Z ##[endgroup]
-2023-11-19T23:45:39.9825087Z [command]/opt/hostedtoolcache/node/12.22.12/x64/bin/npm config get cache
-2023-11-19T23:45:40.1196854Z /home/runner/.npm
-2023-11-19T23:45:40.2643414Z npm cache is not found
-2023-11-19T23:45:40.2842709Z ##[group]Run npm ci
-2023-11-19T23:45:40.2843175Z [36;1mnpm ci[0m
-2023-11-19T23:45:40.2903027Z shell: /usr/bin/bash -e {0}
-2023-11-19T23:45:40.2903636Z ##[endgroup]
-2023-11-19T23:45:51.8555476Z 
-2023-11-19T23:45:51.8566699Z > sinon@4.5.0 postinstall /home/runner/work/axios-microprint-example/axios-microprint-example/node_modules/sinon
-2023-11-19T23:45:51.8568609Z > node scripts/support-sinon.js
-2023-11-19T23:45:51.8569192Z 
-2023-11-19T23:45:51.8981482Z [32mHave some ❤️ for Sinon? You can support the project via Open Collective:[22m[39m
-2023-11-19T23:45:51.8982745Z  > [96m[1mhttps://opencollective.com/sinon/donate
-2023-11-19T23:45:51.8983397Z [0m
-2023-11-19T23:45:52.0913396Z 
-2023-11-19T23:45:52.0916296Z > core-js@3.22.2 postinstall /home/runner/work/axios-microprint-example/axios-microprint-example/node_modules/global-agent/node_modules/core-js
-2023-11-19T23:45:52.0918529Z > node -e "try{require('./postinstall')}catch(e){}"
-2023-11-19T23:45:52.0919149Z 
-2023-11-19T23:45:52.2640021Z 
-2023-11-19T23:45:52.2642168Z > core-js@2.6.12 postinstall /home/runner/work/axios-microprint-example/axios-microprint-example/node_modules/core-js
-2023-11-19T23:45:52.2643953Z > node -e "try{require('./postinstall')}catch(e){}"
-2023-11-19T23:45:52.2644664Z 
-2023-11-19T23:45:52.3791060Z 
-2023-11-19T23:45:52.3793510Z > fsevents@1.2.13 install /home/runner/work/axios-microprint-example/axios-microprint-example/node_modules/glob-watcher/node_modules/fsevents
-2023-11-19T23:45:52.3795096Z > node install.js
-2023-11-19T23:45:52.3795381Z 
-2023-11-19T23:45:52.4207526Z 
-2023-11-19T23:45:52.4212856Z Skipping 'fsevents' build as platform linux is not supported
-2023-11-19T23:45:52.4469651Z 
-2023-11-19T23:45:52.4471881Z > es5-ext@0.10.61 postinstall /home/runner/work/axios-microprint-example/axios-microprint-example/node_modules/es5-ext
-2023-11-19T23:45:52.4474068Z >  node -e "try{require('./_postinstall')}catch(e){}" || exit 0
-2023-11-19T23:45:52.4474975Z 
-2023-11-19T23:45:52.7211961Z 
-2023-11-19T23:45:52.7213953Z > axios@1.6.0 prepare /home/runner/work/axios-microprint-example/axios-microprint-example
-2023-11-19T23:45:52.7215689Z > husky install && npm run prepare:hooks
-2023-11-19T23:45:52.7216157Z 
-2023-11-19T23:45:52.7806115Z husky - Git hooks installed
-2023-11-19T23:45:52.9455520Z 
-2023-11-19T23:45:52.9457688Z > axios@1.6.0 prepare:hooks /home/runner/work/axios-microprint-example/axios-microprint-example
-2023-11-19T23:45:52.9459655Z > npx husky set .husky/commit-msg "npx commitlint --edit $1"
-2023-11-19T23:45:52.9460461Z 
-2023-11-19T23:45:52.9912340Z husky - created .husky/commit-msg
-2023-11-19T23:45:53.0003967Z added 1866 packages in 12.393s
-2023-11-19T23:45:53.0306959Z ##[group]Run npm test
-2023-11-19T23:45:53.0307481Z [36;1mnpm test[0m
-2023-11-19T23:45:53.0355383Z shell: /usr/bin/bash -e {0}
-2023-11-19T23:45:53.0355925Z ##[endgroup]
-2023-11-19T23:45:53.2020626Z 
-2023-11-19T23:45:53.2022041Z > axios@1.6.0 test /home/runner/work/axios-microprint-example/axios-microprint-example
-2023-11-19T23:45:53.2024382Z > npm run test:eslint && npm run test:mocha && npm run test:karma && npm run test:dtslint && npm run test:exports
-2023-11-19T23:45:53.2025532Z 
-2023-11-19T23:45:53.3680683Z 
-2023-11-19T23:45:53.3682641Z > axios@1.6.0 test:eslint /home/runner/work/axios-microprint-example/axios-microprint-example
-2023-11-19T23:45:53.3683492Z > node bin/ssl_hotfix.js eslint lib/**/*.js
-2023-11-19T23:45:53.3683841Z 
-2023-11-19T23:45:53.4067049Z Running eslint lib/adapters/adapters.js lib/adapters/http.js lib/adapters/xhr.js lib/cancel/CancelToken.js lib/cancel/CanceledError.js lib/cancel/isCancel.js lib/core/Axios.js lib/core/AxiosError.js lib/core/AxiosHeaders.js lib/core/InterceptorManager.js lib/core/buildFullPath.js lib/core/dispatchRequest.js lib/core/mergeConfig.js lib/core/settle.js lib/core/transformData.js lib/defaults/index.js lib/defaults/transitional.js lib/env/data.js lib/helpers/AxiosTransformStream.js lib/helpers/AxiosURLSearchParams.js lib/helpers/HttpStatusCode.js lib/helpers/ZlibHeaderTransformStream.js lib/helpers/bind.js lib/helpers/buildURL.js lib/helpers/callbackify.js lib/helpers/combineURLs.js lib/helpers/cookies.js lib/helpers/deprecatedMethod.js lib/helpers/formDataToJSON.js lib/helpers/formDataToStream.js lib/helpers/fromDataURI.js lib/helpers/isAbsoluteURL.js lib/helpers/isAxiosError.js lib/helpers/isURLSameOrigin.js lib/helpers/null.js lib/helpers/parseHeaders.js lib/helpers/parseProtocol.js lib/helpers/readBlob.js lib/helpers/speedometer.js lib/helpers/spread.js lib/helpers/throttle.js lib/helpers/toFormData.js lib/helpers/toURLEncodedForm.js lib/helpers/validator.js lib/platform/index.js on v12.22.12
-2023-11-19T23:45:53.4079384Z 
-2023-11-19T23:45:54.3839395Z 
-2023-11-19T23:45:54.3841712Z > axios@1.6.0 test:mocha /home/runner/work/axios-microprint-example/axios-microprint-example
-2023-11-19T23:45:54.3844155Z > node bin/ssl_hotfix.js mocha test/unit/**/*.js --timeout 30000 --exit
-2023-11-19T23:45:54.3845069Z 
-2023-11-19T23:45:54.4222831Z Running mocha test/unit/adapters/adapters.js test/unit/adapters/http.js test/unit/core/AxiosHeaders.js test/unit/defaults/transformReponse.js test/unit/helpers/fromDataURI.js test/unit/helpers/parseProtocol.js test/unit/regression/SNYK-JS-AXIOS-1038255.js test/unit/regression/bugs.js test/unit/utils/utils.js --timeout 30000 --exit on v12.22.12
-2023-11-19T23:45:54.4226465Z 
-2023-11-19T23:45:54.8110718Z 
-2023-11-19T23:45:54.8115220Z 
-2023-11-19T23:45:54.8119832Z   adapters
-2023-11-19T23:45:54.8130451Z     ✔ should support loading by fn handle
-2023-11-19T23:45:54.8133973Z     ✔ should support loading by name
-2023-11-19T23:45:54.8139569Z     ✔ should detect adapter unavailable status
-2023-11-19T23:45:54.8142729Z     ✔ should detect adapter unsupported status
-2023-11-19T23:45:54.8145763Z     ✔ should pick suitable adapter from the list
-2023-11-19T23:45:54.8146990Z 
-2023-11-19T23:45:54.8150800Z   supports http with nodejs
-2023-11-19T23:45:55.1251064Z     ✔ should throw an error if the timeout property is not parsable as a number (309ms)
-2023-11-19T23:46:05.4303854Z     ✔ should parse the timeout property (302ms)
-2023-11-19T23:46:05.7320242Z     ✔ should respect the timeout property (301ms)
-2023-11-19T23:46:06.0332623Z     ✔ should respect the timeoutErrorMessage property (300ms)
-2023-11-19T23:46:06.0378390Z     ✔ should allow passing JSON
-2023-11-19T23:46:06.0399799Z     ✔ should allow passing JSON with BOM
-2023-11-19T23:46:06.0438907Z     ✔ should redirect
-2023-11-19T23:46:06.0458151Z     ✔ should not redirect
-2023-11-19T23:46:06.0514432Z     ✔ should support max redirects
-2023-11-19T23:46:06.0534290Z     ✔ should support beforeRedirect
-2023-11-19T23:46:06.0663721Z     ✔ should support beforeRedirect and proxy with redirect
-2023-11-19T23:46:06.0690942Z     ✔ should preserve the HTTP verb on redirect
-2023-11-19T23:46:06.0748497Z     ✔ should support UTF8
-2023-11-19T23:46:06.0769200Z     ✔ should support basic auth
-2023-11-19T23:46:06.0787281Z     ✔ should support basic auth with a header
-2023-11-19T23:46:06.0805223Z     ✔ should provides a default User-Agent header
-2023-11-19T23:46:06.0822111Z     ✔ should allow the User-Agent header to be overridden
-2023-11-19T23:46:06.0841723Z     ✔ should allow the Content-Length header to be overridden
-2023-11-19T23:46:06.0860706Z     ✔ should support max content length
-2023-11-19T23:46:06.1885860Z     ✔ should support max content length for redirected (102ms)
-2023-11-19T23:46:06.2916509Z     ✔ should support max body length (103ms)
-2023-11-19T23:46:06.6274089Z     ✔ should properly support default max body length (follow-redirects as well) (336ms)
-2023-11-19T23:46:06.6286631Z     ✔ should display error while parsing params
-2023-11-19T23:46:06.6303752Z     ✔ should support sockets
-2023-11-19T23:46:06.6360662Z     ✔ should support buffers
-2023-11-19T23:46:06.6387536Z     ✔ should support HTTP proxies
-2023-11-19T23:46:06.6548862Z     ✔ should support HTTPS proxies
-2023-11-19T23:46:06.6566449Z     ✔ should not pass through disabled proxy
-2023-11-19T23:46:06.6591642Z     ✔ should support proxy set via env var
-2023-11-19T23:46:06.6669068Z     ✔ should support HTTPS proxy set via env var
-2023-11-19T23:46:06.6697827Z     ✔ should re-evaluate proxy on redirect when proxy set via env var
-2023-11-19T23:46:06.6714990Z     ✔ should not use proxy for domains in no_proxy
-2023-11-19T23:46:06.6739601Z     ✔ should use proxy for domains not in no_proxy
-2023-11-19T23:46:06.6765469Z     ✔ should support HTTP proxy auth
-2023-11-19T23:46:06.6801845Z     ✔ should support proxy auth from env
-2023-11-19T23:46:06.6832159Z     ✔ should support proxy auth with header
-2023-11-19T23:46:06.6848747Z     ✔ should support cancel
-2023-11-19T23:46:16.6872008Z     ✔ should combine baseURL and url
-2023-11-19T23:46:17.6906730Z     ✔ should support HTTP protocol (1003ms)
-2023-11-19T23:46:17.7607834Z     ✔ should support HTTPS protocol (70ms)
-2023-11-19T23:46:18.0623655Z     ✔ should return malformed URL (301ms)
-2023-11-19T23:46:18.3644494Z     ✔ should return unsupported protocol (302ms)
-2023-11-19T23:46:18.3663857Z     ✔ should supply a user-agent if one is not specified
-2023-11-19T23:46:18.3680002Z     ✔ should omit a user-agent if one is explicitly disclaimed
-2023-11-19T23:46:18.5727724Z     ✔ should throw an error if http server that aborts a chunked request (204ms)
-2023-11-19T23:46:18.5761083Z     ✔ should able to cancel multiple requests with CancelToken
-2023-11-19T23:46:18.5796625Z     ✔ should respect formSerializer config
-2023-11-19T23:46:18.5807274Z     ✔ should properly handle synchronous errors inside the adapter
-2023-11-19T23:46:18.5824023Z     ✔ should support function as paramsSerializer value
-2023-11-19T23:46:18.5829393Z     compression
-2023-11-19T23:46:18.5854830Z       ✔ should support transparent gunzip
-2023-11-19T23:46:18.5880510Z       ✔ should support gunzip error handling
-2023-11-19T23:46:18.5898541Z       ✔ should support disabling automatic decompression of response data
-2023-11-19T23:46:18.5901719Z       algorithms
-2023-11-19T23:46:18.5902437Z         gzip decompression
-2023-11-19T23:46:18.5918891Z           ✔ should support decompression
-2023-11-19T23:46:18.5936347Z           ✔ should not fail if response content-length header is missing (gzip)
-2023-11-19T23:46:18.5953482Z           ✔ should not fail with chunked responses (without Content-Length header)
-2023-11-19T23:46:18.5968540Z           ✔ should not fail with an empty response without content-length header (Z_BUF_ERROR)
-2023-11-19T23:46:18.5984021Z           ✔ should not fail with an empty response with content-length header (Z_BUF_ERROR)
-2023-11-19T23:46:18.5986856Z         GZIP decompression
-2023-11-19T23:46:18.6002379Z           ✔ should support decompression
-2023-11-19T23:46:18.6437075Z           ✔ should not fail if response content-length header is missing (GZIP)
-2023-11-19T23:46:18.6438730Z           ✔ should not fail with chunked responses (without Content-Length header)
-2023-11-19T23:46:18.6440085Z           ✔ should not fail with an empty response without content-length header (Z_BUF_ERROR)
-2023-11-19T23:46:18.6441368Z           ✔ should not fail with an empty response with content-length header (Z_BUF_ERROR)
-2023-11-19T23:46:18.6442214Z         compress decompression
-2023-11-19T23:46:18.6442851Z           ✔ should support decompression
-2023-11-19T23:46:18.6443782Z           ✔ should not fail if response content-length header is missing (compress)
-2023-11-19T23:46:18.6445121Z           ✔ should not fail with chunked responses (without Content-Length header)
-2023-11-19T23:46:18.6446371Z           ✔ should not fail with an empty response without content-length header (Z_BUF_ERROR)
-2023-11-19T23:46:18.6447606Z           ✔ should not fail with an empty response with content-length header (Z_BUF_ERROR)
-2023-11-19T23:46:18.6448430Z         deflate decompression
-2023-11-19T23:46:18.6449099Z           ✔ should support decompression
-2023-11-19T23:46:18.6450205Z           ✔ should not fail if response content-length header is missing (deflate)
-2023-11-19T23:46:18.6451296Z           ✔ should not fail with chunked responses (without Content-Length header)
-2023-11-19T23:46:18.6452585Z           ✔ should not fail with an empty response without content-length header (Z_BUF_ERROR)
-2023-11-19T23:46:18.6453783Z           ✔ should not fail with an empty response with content-length header (Z_BUF_ERROR)
-2023-11-19T23:46:18.6454563Z         deflate-raw decompression
-2023-11-19T23:46:18.6455149Z           ✔ should support decompression
-2023-11-19T23:46:18.6455835Z           ✔ should not fail if response content-length header is missing (deflate)
-2023-11-19T23:46:18.6456720Z           ✔ should not fail with chunked responses (without Content-Length header)
-2023-11-19T23:46:18.6457738Z           ✔ should not fail with an empty response without content-length header (Z_BUF_ERROR)
-2023-11-19T23:46:18.6458711Z           ✔ should not fail with an empty response with content-length header (Z_BUF_ERROR)
-2023-11-19T23:46:18.6459336Z         br decompression
-2023-11-19T23:46:18.6459860Z           ✔ should support decompression
-2023-11-19T23:46:18.6460537Z           ✔ should not fail if response content-length header is missing (br)
-2023-11-19T23:46:18.6461361Z           ✔ should not fail with chunked responses (without Content-Length header)
-2023-11-19T23:46:18.6462358Z           ✔ should not fail with an empty response without content-length header (Z_BUF_ERROR)
-2023-11-19T23:46:18.6463340Z           ✔ should not fail with an empty response with content-length header (Z_BUF_ERROR)
-2023-11-19T23:46:18.6463956Z     streams
-2023-11-19T23:46:18.6472032Z       ✔ should support streams
-2023-11-19T23:46:18.6483436Z       ✔ should pass errors for a failed stream
-2023-11-19T23:46:29.6511819Z pipeline error: CanceledError: Request stream has been aborted
-2023-11-19T23:46:29.6514174Z       ✔ should destroy the response stream with an error on request stream destroying (1002ms)
-2023-11-19T23:46:29.6519491Z Server warning: Premature close
-2023-11-19T23:46:29.6524009Z     different options for direct proxy configuration (without env variables)
-2023-11-19T23:46:29.6526120Z       ✔ hostname and trailing colon in protocol
-2023-11-19T23:46:29.6528778Z       ✔ hostname and no trailing colon in protocol
-2023-11-19T23:46:29.6531428Z       ✔ both hostname and host -> hostname takes precedence
-2023-11-19T23:46:29.6533196Z       ✔ only host and https protocol
-2023-11-19T23:46:29.6535263Z     FormData
-2023-11-19T23:46:29.6536458Z       form-data instance (https://www.npmjs.com/package/form-data)
-2023-11-19T23:46:29.6632745Z         ✔ should allow passing FormData
-2023-11-19T23:46:29.6636252Z       SpecCompliant FormData
-2023-11-19T23:46:29.6695137Z         ✔ should allow passing FormData
-2023-11-19T23:46:29.6698251Z       toFormData helper
-2023-11-19T23:46:29.6924738Z         ✔ should properly serialize nested objects for parsing with multer.js (express.js)
-2023-11-19T23:46:29.6928326Z     Blob
-2023-11-19T23:46:29.6954766Z       ✔ should support Blob
-2023-11-19T23:46:29.6957603Z     URLEncoded Form
-2023-11-19T23:46:29.7086618Z       ✔ should post object data as url-encoded form if content-type is application/x-www-form-urlencoded
-2023-11-19T23:46:29.7088424Z     Data URL
-2023-11-19T23:46:29.7096538Z       ✔ should support requesting data URL as a Buffer
-2023-11-19T23:46:29.7100453Z       - should support requesting data URL as a Blob (if supported by the environment)
-2023-11-19T23:46:29.7113565Z       ✔ should support requesting data URL as a String (text)
-2023-11-19T23:46:29.7118787Z       ✔ should support requesting data URL as a Stream
-2023-11-19T23:46:29.7120467Z     progress
-2023-11-19T23:46:29.7120978Z       upload
-2023-11-19T23:46:40.7288151Z         ✔ should support upload progress capturing (11016ms)
-2023-11-19T23:46:40.7290544Z       download
-2023-11-19T23:46:51.7438534Z         ✔ should support download progress capturing (11014ms)
-2023-11-19T23:46:51.7441456Z     Rate limit
-2023-11-19T23:47:01.2602032Z       ✔ should support upload rate limit (9515ms)
-2023-11-19T23:47:08.6702144Z ##[error]The operation was canceled.
-2023-11-19T23:47:08.6790098Z Post job cleanup.
-2023-11-19T23:47:08.7628449Z [command]/usr/bin/git version
-2023-11-19T23:47:08.7681558Z git version 2.42.0
-2023-11-19T23:47:08.7724841Z Temporarily overriding HOME='/home/runner/work/_temp/56b25b06-b9cd-4d2e-a631-7312d60ae737' before making global git config changes
-2023-11-19T23:47:08.7727287Z Adding repository directory to the temporary git global config as a safe directory
-2023-11-19T23:47:08.7732801Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/axios-microprint-example/axios-microprint-example
-2023-11-19T23:47:08.7775572Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2023-11-19T23:47:08.7821234Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2023-11-19T23:47:08.8080836Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2023-11-19T23:47:08.8122060Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2023-11-19T23:47:08.8614797Z Cleaning up orphan processes
-2023-11-19T23:47:08.8925243Z Terminate orphan process: pid (2039) (node)
-2023-11-19T23:47:08.9035083Z Terminate orphan process: pid (2050) (sh)
-2023-11-19T23:47:08.9140291Z Terminate orphan process: pid (2089) (node)
-2023-11-19T23:47:08.9247200Z Terminate orphan process: pid (2100) (sh)
-2023-11-19T23:47:08.9353599Z Terminate orphan process: pid (2101) (node)
-2023-11-19T23:47:08.9619907Z Terminate orphan process: pid (2112) (sh)
-2023-11-19T23:47:08.9699181Z Terminate orphan process: pid (2113) (node)
-2023-11-19T23:47:08.9784977Z Terminate orphan process: pid (2120) (node)
+2023-11-20T02:18:58.9944517Z Requested labels: ubuntu-latest
+2023-11-20T02:18:58.9944776Z Job defined at: AlphaSteam/axios-microprint-example/.github/workflows/ci.yml@refs/heads/microprint_test
+2023-11-20T02:18:58.9944865Z Waiting for a runner to pick up this job...
+2023-11-20T02:19:00.4098932Z Job is waiting for a hosted runner to come online.
+2023-11-20T02:19:02.2749612Z Job is about to start running on the hosted runner: GitHub Actions 4 (hosted)
+2023-11-20T02:19:04.1252460Z Current runner version: '2.311.0'
+2023-11-20T02:19:04.1276581Z ##[group]Operating System
+2023-11-20T02:19:04.1277346Z Ubuntu
+2023-11-20T02:19:04.1277660Z 22.04.3
+2023-11-20T02:19:04.1277994Z LTS
+2023-11-20T02:19:04.1278287Z ##[endgroup]
+2023-11-20T02:19:04.1278745Z ##[group]Runner Image
+2023-11-20T02:19:04.1279192Z Image: ubuntu-22.04
+2023-11-20T02:19:04.1279550Z Version: 20231030.2.0
+2023-11-20T02:19:04.1280721Z Included Software: https://github.com/actions/runner-images/blob/ubuntu22/20231030.2/images/linux/Ubuntu2204-Readme.md
+2023-11-20T02:19:04.1282210Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu22%2F20231030.2
+2023-11-20T02:19:04.1283153Z ##[endgroup]
+2023-11-20T02:19:04.1283533Z ##[group]Runner Image Provisioner
+2023-11-20T02:19:04.1284021Z 2.0.312.1
+2023-11-20T02:19:04.1284411Z ##[endgroup]
+2023-11-20T02:19:04.1285306Z ##[group]GITHUB_TOKEN Permissions
+2023-11-20T02:19:04.1286862Z Contents: read
+2023-11-20T02:19:04.1287405Z Metadata: read
+2023-11-20T02:19:04.1287960Z ##[endgroup]
+2023-11-20T02:19:04.1291251Z Secret source: Actions
+2023-11-20T02:19:04.1291842Z Prepare workflow directory
+2023-11-20T02:19:04.1924436Z Prepare all required actions
+2023-11-20T02:19:04.2083145Z Getting action download info
+2023-11-20T02:19:04.4470814Z Download action repository 'actions/checkout@v3' (SHA:f43a0e5ff2bd294095638e18286ca9a3d1956744)
+2023-11-20T02:19:04.5687174Z Download action repository 'actions/setup-node@v3' (SHA:1a4442cacd436585916779262731d5b162bc6ec7)
+2023-11-20T02:19:04.8488474Z Complete job name: build (12.x)
+2023-11-20T02:19:04.9441942Z ##[group]Run actions/checkout@v3
+2023-11-20T02:19:04.9442558Z with:
+2023-11-20T02:19:04.9443080Z   persist-credentials: false
+2023-11-20T02:19:04.9443694Z   repository: AlphaSteam/axios-microprint-example
+2023-11-20T02:19:04.9444561Z   token: ***
+2023-11-20T02:19:04.9445039Z   ssh-strict: true
+2023-11-20T02:19:04.9445399Z   clean: true
+2023-11-20T02:19:04.9445823Z   sparse-checkout-cone-mode: true
+2023-11-20T02:19:04.9446407Z   fetch-depth: 1
+2023-11-20T02:19:04.9446793Z   fetch-tags: false
+2023-11-20T02:19:04.9447202Z   lfs: false
+2023-11-20T02:19:04.9447627Z   submodules: false
+2023-11-20T02:19:04.9448001Z   set-safe-directory: true
+2023-11-20T02:19:04.9448470Z ##[endgroup]
+2023-11-20T02:19:05.1178048Z Syncing repository: AlphaSteam/axios-microprint-example
+2023-11-20T02:19:05.1180232Z ##[group]Getting Git version info
+2023-11-20T02:19:05.1181366Z Working directory is '/home/runner/work/axios-microprint-example/axios-microprint-example'
+2023-11-20T02:19:05.1182950Z [command]/usr/bin/git version
+2023-11-20T02:19:05.1183405Z git version 2.42.0
+2023-11-20T02:19:05.1196747Z ##[endgroup]
+2023-11-20T02:19:05.1215033Z Temporarily overriding HOME='/home/runner/work/_temp/a3e0812c-b988-4994-aecc-635710eac221' before making global git config changes
+2023-11-20T02:19:05.1217423Z Adding repository directory to the temporary git global config as a safe directory
+2023-11-20T02:19:05.1220266Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/axios-microprint-example/axios-microprint-example
+2023-11-20T02:19:05.1265392Z Deleting the contents of '/home/runner/work/axios-microprint-example/axios-microprint-example'
+2023-11-20T02:19:05.1269305Z ##[group]Initializing the repository
+2023-11-20T02:19:05.1272887Z [command]/usr/bin/git init /home/runner/work/axios-microprint-example/axios-microprint-example
+2023-11-20T02:19:05.1372535Z hint: Using 'master' as the name for the initial branch. This default branch name
+2023-11-20T02:19:05.1373759Z hint: is subject to change. To configure the initial branch name to use in all
+2023-11-20T02:19:05.1375014Z hint: of your new repositories, which will suppress this warning, call:
+2023-11-20T02:19:05.1375788Z hint: 
+2023-11-20T02:19:05.1376326Z hint: 	git config --global init.defaultBranch <name>
+2023-11-20T02:19:05.1376987Z hint: 
+2023-11-20T02:19:05.1377902Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2023-11-20T02:19:05.1379032Z hint: 'development'. The just-created branch can be renamed via this command:
+2023-11-20T02:19:05.1380263Z hint: 
+2023-11-20T02:19:05.1380650Z hint: 	git branch -m <name>
+2023-11-20T02:19:05.1383523Z Initialized empty Git repository in /home/runner/work/axios-microprint-example/axios-microprint-example/.git/
+2023-11-20T02:19:05.1392602Z [command]/usr/bin/git remote add origin https://github.com/AlphaSteam/axios-microprint-example
+2023-11-20T02:19:05.1436399Z ##[endgroup]
+2023-11-20T02:19:05.1437165Z ##[group]Disabling automatic garbage collection
+2023-11-20T02:19:05.1439577Z [command]/usr/bin/git config --local gc.auto 0
+2023-11-20T02:19:05.1476626Z ##[endgroup]
+2023-11-20T02:19:05.1477338Z ##[group]Setting up auth
+2023-11-20T02:19:05.1482723Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-11-20T02:19:05.1520670Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-11-20T02:19:05.1838768Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-11-20T02:19:05.1881335Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-11-20T02:19:05.2133116Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2023-11-20T02:19:05.2181643Z ##[endgroup]
+2023-11-20T02:19:05.2183479Z ##[group]Fetching the repository
+2023-11-20T02:19:05.2192724Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --progress --no-recurse-submodules --depth=1 origin +2fec34afc2595046becf855557f7b8b787a38172:refs/remotes/origin/microprint_test
+2023-11-20T02:19:05.4337081Z remote: Enumerating objects: 277, done.        
+2023-11-20T02:19:05.4338794Z remote: Counting objects:   0% (1/277)        
+2023-11-20T02:19:05.4339531Z remote: Counting objects:   1% (3/277)        
+2023-11-20T02:19:05.4340312Z remote: Counting objects:   2% (6/277)        
+2023-11-20T02:19:05.4341131Z remote: Counting objects:   3% (9/277)        
+2023-11-20T02:19:05.4342040Z remote: Counting objects:   4% (12/277)        
+2023-11-20T02:19:05.4343183Z remote: Counting objects:   5% (14/277)        
+2023-11-20T02:19:05.4344176Z remote: Counting objects:   6% (17/277)        
+2023-11-20T02:19:05.4345302Z remote: Counting objects:   7% (20/277)        
+2023-11-20T02:19:05.4346222Z remote: Counting objects:   8% (23/277)        
+2023-11-20T02:19:05.4346889Z remote: Counting objects:   9% (25/277)        
+2023-11-20T02:19:05.4347785Z remote: Counting objects:  10% (28/277)        
+2023-11-20T02:19:05.4348656Z remote: Counting objects:  11% (31/277)        
+2023-11-20T02:19:05.4349690Z remote: Counting objects:  12% (34/277)        
+2023-11-20T02:19:05.4350745Z remote: Counting objects:  13% (37/277)        
+2023-11-20T02:19:05.4351625Z remote: Counting objects:  14% (39/277)        
+2023-11-20T02:19:05.4352406Z remote: Counting objects:  15% (42/277)        
+2023-11-20T02:19:05.4353515Z remote: Counting objects:  16% (45/277)        
+2023-11-20T02:19:05.4354143Z remote: Counting objects:  17% (48/277)        
+2023-11-20T02:19:05.4354783Z remote: Counting objects:  18% (50/277)        
+2023-11-20T02:19:05.4355509Z remote: Counting objects:  19% (53/277)        
+2023-11-20T02:19:05.4356107Z remote: Counting objects:  20% (56/277)        
+2023-11-20T02:19:05.4356748Z remote: Counting objects:  21% (59/277)        
+2023-11-20T02:19:05.4357437Z remote: Counting objects:  22% (61/277)        
+2023-11-20T02:19:05.4358057Z remote: Counting objects:  23% (64/277)        
+2023-11-20T02:19:05.4358651Z remote: Counting objects:  24% (67/277)        
+2023-11-20T02:19:05.4359325Z remote: Counting objects:  25% (70/277)        
+2023-11-20T02:19:05.4359936Z remote: Counting objects:  26% (73/277)        
+2023-11-20T02:19:05.4360530Z remote: Counting objects:  27% (75/277)        
+2023-11-20T02:19:05.4361520Z remote: Counting objects:  28% (78/277)        
+2023-11-20T02:19:05.4362151Z remote: Counting objects:  29% (81/277)        
+2023-11-20T02:19:05.4362729Z remote: Counting objects:  30% (84/277)        
+2023-11-20T02:19:05.4363429Z remote: Counting objects:  31% (86/277)        
+2023-11-20T02:19:05.4364055Z remote: Counting objects:  32% (89/277)        
+2023-11-20T02:19:05.4364624Z remote: Counting objects:  33% (92/277)        
+2023-11-20T02:19:05.4365292Z remote: Counting objects:  34% (95/277)        
+2023-11-20T02:19:05.4365953Z remote: Counting objects:  35% (97/277)        
+2023-11-20T02:19:05.4366569Z remote: Counting objects:  36% (100/277)        
+2023-11-20T02:19:05.4367242Z remote: Counting objects:  37% (103/277)        
+2023-11-20T02:19:05.4368191Z remote: Counting objects:  38% (106/277)        
+2023-11-20T02:19:05.4369180Z remote: Counting objects:  39% (109/277)        
+2023-11-20T02:19:05.4370021Z remote: Counting objects:  40% (111/277)        
+2023-11-20T02:19:05.4370696Z remote: Counting objects:  41% (114/277)        
+2023-11-20T02:19:05.4371368Z remote: Counting objects:  42% (117/277)        
+2023-11-20T02:19:05.4372042Z remote: Counting objects:  43% (120/277)        
+2023-11-20T02:19:05.4372668Z remote: Counting objects:  44% (122/277)        
+2023-11-20T02:19:05.4373301Z remote: Counting objects:  45% (125/277)        
+2023-11-20T02:19:05.4373976Z remote: Counting objects:  46% (128/277)        
+2023-11-20T02:19:05.4374597Z remote: Counting objects:  47% (131/277)        
+2023-11-20T02:19:05.4375438Z remote: Counting objects:  48% (133/277)        
+2023-11-20T02:19:05.4376174Z remote: Counting objects:  49% (136/277)        
+2023-11-20T02:19:05.4376773Z remote: Counting objects:  50% (139/277)        
+2023-11-20T02:19:05.4377417Z remote: Counting objects:  51% (142/277)        
+2023-11-20T02:19:05.4378514Z remote: Counting objects:  52% (145/277)        
+2023-11-20T02:19:05.4379128Z remote: Counting objects:  53% (147/277)        
+2023-11-20T02:19:05.4379786Z remote: Counting objects:  54% (150/277)        
+2023-11-20T02:19:05.4380523Z remote: Counting objects:  55% (153/277)        
+2023-11-20T02:19:05.4381121Z remote: Counting objects:  56% (156/277)        
+2023-11-20T02:19:05.4381767Z remote: Counting objects:  57% (158/277)        
+2023-11-20T02:19:05.4382451Z remote: Counting objects:  58% (161/277)        
+2023-11-20T02:19:05.4383036Z remote: Counting objects:  59% (164/277)        
+2023-11-20T02:19:05.4383671Z remote: Counting objects:  60% (167/277)        
+2023-11-20T02:19:05.4384357Z remote: Counting objects:  61% (169/277)        
+2023-11-20T02:19:05.4385256Z remote: Counting objects:  62% (172/277)        
+2023-11-20T02:19:05.4386108Z remote: Counting objects:  63% (175/277)        
+2023-11-20T02:19:05.4387224Z remote: Counting objects:  64% (178/277)        
+2023-11-20T02:19:05.4388162Z remote: Counting objects:  65% (181/277)        
+2023-11-20T02:19:05.4389099Z remote: Counting objects:  66% (183/277)        
+2023-11-20T02:19:05.4390195Z remote: Counting objects:  67% (186/277)        
+2023-11-20T02:19:05.4391205Z remote: Counting objects:  68% (189/277)        
+2023-11-20T02:19:05.4392162Z remote: Counting objects:  69% (192/277)        
+2023-11-20T02:19:05.4393147Z remote: Counting objects:  70% (194/277)        
+2023-11-20T02:19:05.4394136Z remote: Counting objects:  71% (197/277)        
+2023-11-20T02:19:05.4394991Z remote: Counting objects:  72% (200/277)        
+2023-11-20T02:19:05.4396125Z remote: Counting objects:  73% (203/277)        
+2023-11-20T02:19:05.4397135Z remote: Counting objects:  74% (205/277)        
+2023-11-20T02:19:05.4398144Z remote: Counting objects:  75% (208/277)        
+2023-11-20T02:19:05.4399097Z remote: Counting objects:  76% (211/277)        
+2023-11-20T02:19:05.4400040Z remote: Counting objects:  77% (214/277)        
+2023-11-20T02:19:05.4401053Z remote: Counting objects:  78% (217/277)        
+2023-11-20T02:19:05.4401683Z remote: Counting objects:  79% (219/277)        
+2023-11-20T02:19:05.4402315Z remote: Counting objects:  80% (222/277)        
+2023-11-20T02:19:05.4403261Z remote: Counting objects:  81% (225/277)        
+2023-11-20T02:19:05.4403865Z remote: Counting objects:  82% (228/277)        
+2023-11-20T02:19:05.4404888Z remote: Counting objects:  83% (230/277)        
+2023-11-20T02:19:05.4405973Z remote: Counting objects:  84% (233/277)        
+2023-11-20T02:19:05.4406664Z remote: Counting objects:  85% (236/277)        
+2023-11-20T02:19:05.4407297Z remote: Counting objects:  86% (239/277)        
+2023-11-20T02:19:05.4408024Z remote: Counting objects:  87% (241/277)        
+2023-11-20T02:19:05.4408615Z remote: Counting objects:  88% (244/277)        
+2023-11-20T02:19:05.4409521Z remote: Counting objects:  89% (247/277)        
+2023-11-20T02:19:05.4410634Z remote: Counting objects:  90% (250/277)        
+2023-11-20T02:19:05.4411317Z remote: Counting objects:  91% (253/277)        
+2023-11-20T02:19:05.4411954Z remote: Counting objects:  92% (255/277)        
+2023-11-20T02:19:05.4412937Z remote: Counting objects:  93% (258/277)        
+2023-11-20T02:19:05.4413805Z remote: Counting objects:  94% (261/277)        
+2023-11-20T02:19:05.4414687Z remote: Counting objects:  95% (264/277)        
+2023-11-20T02:19:05.4415440Z remote: Counting objects:  96% (266/277)        
+2023-11-20T02:19:05.4416045Z remote: Counting objects:  97% (269/277)        
+2023-11-20T02:19:05.4416686Z remote: Counting objects:  98% (272/277)        
+2023-11-20T02:19:05.4417369Z remote: Counting objects:  99% (275/277)        
+2023-11-20T02:19:05.4418215Z remote: Counting objects: 100% (277/277)        
+2023-11-20T02:19:05.4419065Z remote: Counting objects: 100% (277/277), done.        
+2023-11-20T02:19:05.4419858Z remote: Compressing objects:   0% (1/254)        
+2023-11-20T02:19:05.4420541Z remote: Compressing objects:   1% (3/254)        
+2023-11-20T02:19:05.4421184Z remote: Compressing objects:   2% (6/254)        
+2023-11-20T02:19:05.4421892Z remote: Compressing objects:   3% (8/254)        
+2023-11-20T02:19:05.4422563Z remote: Compressing objects:   4% (11/254)        
+2023-11-20T02:19:05.4423202Z remote: Compressing objects:   5% (13/254)        
+2023-11-20T02:19:05.4423926Z remote: Compressing objects:   6% (16/254)        
+2023-11-20T02:19:05.4424612Z remote: Compressing objects:   7% (18/254)        
+2023-11-20T02:19:05.4425236Z remote: Compressing objects:   8% (21/254)        
+2023-11-20T02:19:05.4425974Z remote: Compressing objects:   9% (23/254)        
+2023-11-20T02:19:05.4426691Z remote: Compressing objects:  10% (26/254)        
+2023-11-20T02:19:05.4427315Z remote: Compressing objects:  11% (28/254)        
+2023-11-20T02:19:05.4428038Z remote: Compressing objects:  12% (31/254)        
+2023-11-20T02:19:05.4428709Z remote: Compressing objects:  13% (34/254)        
+2023-11-20T02:19:05.4429363Z remote: Compressing objects:  14% (36/254)        
+2023-11-20T02:19:05.4430037Z remote: Compressing objects:  15% (39/254)        
+2023-11-20T02:19:05.4430711Z remote: Compressing objects:  16% (41/254)        
+2023-11-20T02:19:05.4431664Z remote: Compressing objects:  17% (44/254)        
+2023-11-20T02:19:05.4432820Z remote: Compressing objects:  18% (46/254)        
+2023-11-20T02:19:05.4434117Z remote: Compressing objects:  19% (49/254)        
+2023-11-20T02:19:05.4448673Z remote: Compressing objects:  20% (51/254)        
+2023-11-20T02:19:05.4450830Z remote: Compressing objects:  21% (54/254)        
+2023-11-20T02:19:05.4454327Z remote: Compressing objects:  22% (56/254)        
+2023-11-20T02:19:05.4455332Z remote: Compressing objects:  23% (59/254)        
+2023-11-20T02:19:05.4458388Z remote: Compressing objects:  24% (61/254)        
+2023-11-20T02:19:05.4464320Z remote: Compressing objects:  25% (64/254)        
+2023-11-20T02:19:05.4465570Z remote: Compressing objects:  26% (67/254)        
+2023-11-20T02:19:05.4466941Z remote: Compressing objects:  27% (69/254)        
+2023-11-20T02:19:05.4467659Z remote: Compressing objects:  28% (72/254)        
+2023-11-20T02:19:05.4468341Z remote: Compressing objects:  29% (74/254)        
+2023-11-20T02:19:05.4479303Z remote: Compressing objects:  30% (77/254)        
+2023-11-20T02:19:05.4480651Z remote: Compressing objects:  31% (79/254)        
+2023-11-20T02:19:05.4482942Z remote: Compressing objects:  32% (82/254)        
+2023-11-20T02:19:05.4484217Z remote: Compressing objects:  33% (84/254)        
+2023-11-20T02:19:05.4485283Z remote: Compressing objects:  34% (87/254)        
+2023-11-20T02:19:05.4486066Z remote: Compressing objects:  35% (89/254)        
+2023-11-20T02:19:05.4487235Z remote: Compressing objects:  36% (92/254)        
+2023-11-20T02:19:05.4489482Z remote: Compressing objects:  37% (94/254)        
+2023-11-20T02:19:05.4494398Z remote: Compressing objects:  38% (97/254)        
+2023-11-20T02:19:05.4498330Z remote: Compressing objects:  39% (100/254)        
+2023-11-20T02:19:05.4499246Z remote: Compressing objects:  40% (102/254)        
+2023-11-20T02:19:05.4504888Z remote: Compressing objects:  41% (105/254)        
+2023-11-20T02:19:05.4505726Z remote: Compressing objects:  42% (107/254)        
+2023-11-20T02:19:05.4508079Z remote: Compressing objects:  43% (110/254)        
+2023-11-20T02:19:05.4511496Z remote: Compressing objects:  44% (112/254)        
+2023-11-20T02:19:05.4515637Z remote: Compressing objects:  45% (115/254)        
+2023-11-20T02:19:05.4517216Z remote: Compressing objects:  46% (117/254)        
+2023-11-20T02:19:05.4524283Z remote: Compressing objects:  47% (120/254)        
+2023-11-20T02:19:05.4530769Z remote: Compressing objects:  48% (122/254)        
+2023-11-20T02:19:05.4534285Z remote: Compressing objects:  49% (125/254)        
+2023-11-20T02:19:05.4535485Z remote: Compressing objects:  50% (127/254)        
+2023-11-20T02:19:05.4536230Z remote: Compressing objects:  51% (130/254)        
+2023-11-20T02:19:05.4539015Z remote: Compressing objects:  52% (133/254)        
+2023-11-20T02:19:05.4545198Z remote: Compressing objects:  53% (135/254)        
+2023-11-20T02:19:05.4548443Z remote: Compressing objects:  54% (138/254)        
+2023-11-20T02:19:05.4549450Z remote: Compressing objects:  55% (140/254)        
+2023-11-20T02:19:05.4550258Z remote: Compressing objects:  56% (143/254)        
+2023-11-20T02:19:05.4553037Z remote: Compressing objects:  57% (145/254)        
+2023-11-20T02:19:05.4571479Z remote: Compressing objects:  58% (148/254)        
+2023-11-20T02:19:05.4584389Z remote: Compressing objects:  59% (150/254)        
+2023-11-20T02:19:05.4585366Z remote: Compressing objects:  60% (153/254)        
+2023-11-20T02:19:05.4586102Z remote: Compressing objects:  61% (155/254)        
+2023-11-20T02:19:05.4586928Z remote: Compressing objects:  62% (158/254)        
+2023-11-20T02:19:05.4587584Z remote: Compressing objects:  63% (161/254)        
+2023-11-20T02:19:05.4588259Z remote: Compressing objects:  64% (163/254)        
+2023-11-20T02:19:05.4589027Z remote: Compressing objects:  65% (166/254)        
+2023-11-20T02:19:05.4670210Z remote: Compressing objects:  66% (168/254)        
+2023-11-20T02:19:05.4732556Z remote: Compressing objects:  67% (171/254)        
+2023-11-20T02:19:05.4777762Z remote: Compressing objects:  68% (173/254)        
+2023-11-20T02:19:05.4779713Z remote: Compressing objects:  69% (176/254)        
+2023-11-20T02:19:05.4781102Z remote: Compressing objects:  70% (178/254)        
+2023-11-20T02:19:05.4782495Z remote: Compressing objects:  71% (181/254)        
+2023-11-20T02:19:05.4784359Z remote: Compressing objects:  72% (183/254)        
+2023-11-20T02:19:05.4785776Z remote: Compressing objects:  73% (186/254)        
+2023-11-20T02:19:05.4788156Z remote: Compressing objects:  74% (188/254)        
+2023-11-20T02:19:05.4790967Z remote: Compressing objects:  75% (191/254)        
+2023-11-20T02:19:05.4792563Z remote: Compressing objects:  76% (194/254)        
+2023-11-20T02:19:05.4798212Z remote: Compressing objects:  77% (196/254)        
+2023-11-20T02:19:05.4803243Z remote: Compressing objects:  78% (199/254)        
+2023-11-20T02:19:05.4805025Z remote: Compressing objects:  79% (201/254)        
+2023-11-20T02:19:05.4806508Z remote: Compressing objects:  80% (204/254)        
+2023-11-20T02:19:05.4809537Z remote: Compressing objects:  81% (206/254)        
+2023-11-20T02:19:05.4810614Z remote: Compressing objects:  82% (209/254)        
+2023-11-20T02:19:05.4811950Z remote: Compressing objects:  83% (211/254)        
+2023-11-20T02:19:05.4812991Z remote: Compressing objects:  84% (214/254)        
+2023-11-20T02:19:05.4814022Z remote: Compressing objects:  85% (216/254)        
+2023-11-20T02:19:05.4814730Z remote: Compressing objects:  86% (219/254)        
+2023-11-20T02:19:05.4815372Z remote: Compressing objects:  87% (221/254)        
+2023-11-20T02:19:05.4816123Z remote: Compressing objects:  88% (224/254)        
+2023-11-20T02:19:05.4816819Z remote: Compressing objects:  89% (227/254)        
+2023-11-20T02:19:05.4817495Z remote: Compressing objects:  90% (229/254)        
+2023-11-20T02:19:05.4818755Z remote: Compressing objects:  91% (232/254)        
+2023-11-20T02:19:05.4819431Z remote: Compressing objects:  92% (234/254)        
+2023-11-20T02:19:05.4820093Z remote: Compressing objects:  93% (237/254)        
+2023-11-20T02:19:05.4820875Z remote: Compressing objects:  94% (239/254)        
+2023-11-20T02:19:05.4821527Z remote: Compressing objects:  95% (242/254)        
+2023-11-20T02:19:05.4822201Z remote: Compressing objects:  96% (244/254)        
+2023-11-20T02:19:05.4822972Z remote: Compressing objects:  97% (247/254)        
+2023-11-20T02:19:05.4823596Z remote: Compressing objects:  98% (249/254)        
+2023-11-20T02:19:05.4824256Z remote: Compressing objects:  99% (252/254)        
+2023-11-20T02:19:05.4825198Z remote: Compressing objects: 100% (254/254)        
+2023-11-20T02:19:05.4825910Z remote: Compressing objects: 100% (254/254), done.        
+2023-11-20T02:19:05.4855098Z Receiving objects:   0% (1/277)
+2023-11-20T02:19:05.4857071Z Receiving objects:   1% (3/277)
+2023-11-20T02:19:05.4859159Z Receiving objects:   2% (6/277)
+2023-11-20T02:19:05.4861319Z Receiving objects:   3% (9/277)
+2023-11-20T02:19:05.4862076Z Receiving objects:   4% (12/277)
+2023-11-20T02:19:05.4862623Z Receiving objects:   5% (14/277)
+2023-11-20T02:19:05.4863272Z Receiving objects:   6% (17/277)
+2023-11-20T02:19:05.4863754Z Receiving objects:   7% (20/277)
+2023-11-20T02:19:05.4865908Z Receiving objects:   8% (23/277)
+2023-11-20T02:19:05.4868828Z Receiving objects:   9% (25/277)
+2023-11-20T02:19:05.4870482Z Receiving objects:  10% (28/277)
+2023-11-20T02:19:05.4946215Z Receiving objects:  11% (31/277)
+2023-11-20T02:19:05.4947146Z Receiving objects:  12% (34/277)
+2023-11-20T02:19:05.4947730Z Receiving objects:  13% (37/277)
+2023-11-20T02:19:05.4948289Z Receiving objects:  14% (39/277)
+2023-11-20T02:19:05.4965045Z Receiving objects:  15% (42/277)
+2023-11-20T02:19:05.5090578Z Receiving objects:  16% (45/277)
+2023-11-20T02:19:05.5121146Z Receiving objects:  17% (48/277)
+2023-11-20T02:19:05.5175039Z Receiving objects:  18% (50/277)
+2023-11-20T02:19:05.5228409Z Receiving objects:  19% (53/277)
+2023-11-20T02:19:05.5279239Z Receiving objects:  20% (56/277)
+2023-11-20T02:19:05.5280187Z Receiving objects:  21% (59/277)
+2023-11-20T02:19:05.5280911Z Receiving objects:  22% (61/277)
+2023-11-20T02:19:05.5281557Z Receiving objects:  23% (64/277)
+2023-11-20T02:19:05.5282434Z Receiving objects:  24% (67/277)
+2023-11-20T02:19:05.5283160Z Receiving objects:  25% (70/277)
+2023-11-20T02:19:05.5283923Z Receiving objects:  26% (73/277)
+2023-11-20T02:19:05.5284640Z Receiving objects:  27% (75/277)
+2023-11-20T02:19:05.5285082Z Receiving objects:  28% (78/277)
+2023-11-20T02:19:05.5286471Z Receiving objects:  29% (81/277)
+2023-11-20T02:19:05.5287590Z Receiving objects:  30% (84/277)
+2023-11-20T02:19:05.5288329Z Receiving objects:  31% (86/277)
+2023-11-20T02:19:05.5303655Z Receiving objects:  32% (89/277)
+2023-11-20T02:19:05.5304471Z Receiving objects:  33% (92/277)
+2023-11-20T02:19:05.5305134Z Receiving objects:  34% (95/277)
+2023-11-20T02:19:05.5305822Z Receiving objects:  35% (97/277)
+2023-11-20T02:19:05.5306533Z Receiving objects:  36% (100/277)
+2023-11-20T02:19:05.5336731Z Receiving objects:  37% (103/277)
+2023-11-20T02:19:05.5339039Z Receiving objects:  38% (106/277)
+2023-11-20T02:19:05.5340235Z Receiving objects:  39% (109/277)
+2023-11-20T02:19:05.5340991Z Receiving objects:  40% (111/277)
+2023-11-20T02:19:05.5342137Z Receiving objects:  41% (114/277)
+2023-11-20T02:19:05.5342975Z Receiving objects:  42% (117/277)
+2023-11-20T02:19:05.5343771Z Receiving objects:  43% (120/277)
+2023-11-20T02:19:05.5344664Z Receiving objects:  44% (122/277)
+2023-11-20T02:19:05.5345486Z Receiving objects:  45% (125/277)
+2023-11-20T02:19:05.5346077Z Receiving objects:  46% (128/277)
+2023-11-20T02:19:05.5346587Z Receiving objects:  47% (131/277)
+2023-11-20T02:19:05.5347007Z Receiving objects:  48% (133/277)
+2023-11-20T02:19:05.5748204Z Receiving objects:  49% (136/277)
+2023-11-20T02:19:05.5749413Z Receiving objects:  50% (139/277)
+2023-11-20T02:19:05.5750280Z Receiving objects:  51% (142/277)
+2023-11-20T02:19:05.5751155Z Receiving objects:  52% (145/277)
+2023-11-20T02:19:05.5751903Z Receiving objects:  53% (147/277)
+2023-11-20T02:19:05.5752561Z Receiving objects:  54% (150/277)
+2023-11-20T02:19:05.5753277Z Receiving objects:  55% (153/277)
+2023-11-20T02:19:05.5754057Z Receiving objects:  56% (156/277)
+2023-11-20T02:19:05.6100466Z Receiving objects:  57% (158/277)
+2023-11-20T02:19:05.6101099Z Receiving objects:  58% (161/277)
+2023-11-20T02:19:05.6101878Z Receiving objects:  59% (164/277)
+2023-11-20T02:19:05.6102594Z Receiving objects:  60% (167/277)
+2023-11-20T02:19:05.6103301Z Receiving objects:  61% (169/277)
+2023-11-20T02:19:05.6104092Z Receiving objects:  62% (172/277)
+2023-11-20T02:19:05.6105040Z Receiving objects:  63% (175/277)
+2023-11-20T02:19:05.6105725Z Receiving objects:  64% (178/277)
+2023-11-20T02:19:05.6106454Z Receiving objects:  65% (181/277)
+2023-11-20T02:19:05.6107051Z Receiving objects:  66% (183/277)
+2023-11-20T02:19:05.6107535Z Receiving objects:  67% (186/277)
+2023-11-20T02:19:05.6136096Z Receiving objects:  68% (189/277)
+2023-11-20T02:19:05.6137931Z Receiving objects:  69% (192/277)
+2023-11-20T02:19:05.6138727Z Receiving objects:  70% (194/277)
+2023-11-20T02:19:05.6139899Z Receiving objects:  71% (197/277)
+2023-11-20T02:19:05.6143240Z Receiving objects:  72% (200/277)
+2023-11-20T02:19:05.6143855Z Receiving objects:  73% (203/277)
+2023-11-20T02:19:05.6144619Z Receiving objects:  74% (205/277)
+2023-11-20T02:19:05.6145794Z remote: Total 277 (delta 28), reused 108 (delta 8), pack-reused 0        
+2023-11-20T02:19:05.6146640Z Receiving objects:  75% (208/277)
+2023-11-20T02:19:05.6147375Z Receiving objects:  76% (211/277)
+2023-11-20T02:19:05.6147992Z Receiving objects:  77% (214/277)
+2023-11-20T02:19:05.6148583Z Receiving objects:  78% (217/277)
+2023-11-20T02:19:05.6149283Z Receiving objects:  79% (219/277)
+2023-11-20T02:19:05.6149950Z Receiving objects:  80% (222/277)
+2023-11-20T02:19:05.6150545Z Receiving objects:  81% (225/277)
+2023-11-20T02:19:05.6151247Z Receiving objects:  82% (228/277)
+2023-11-20T02:19:05.6151866Z Receiving objects:  83% (230/277)
+2023-11-20T02:19:05.6152457Z Receiving objects:  84% (233/277)
+2023-11-20T02:19:05.6153159Z Receiving objects:  85% (236/277)
+2023-11-20T02:19:05.6158742Z Receiving objects:  86% (239/277)
+2023-11-20T02:19:05.6159474Z Receiving objects:  87% (241/277)
+2023-11-20T02:19:05.6160331Z Receiving objects:  88% (244/277)
+2023-11-20T02:19:05.6161006Z Receiving objects:  89% (247/277)
+2023-11-20T02:19:05.6161770Z Receiving objects:  90% (250/277)
+2023-11-20T02:19:05.6162368Z Receiving objects:  91% (253/277)
+2023-11-20T02:19:05.6163065Z Receiving objects:  92% (255/277)
+2023-11-20T02:19:05.6166841Z Receiving objects:  93% (258/277)
+2023-11-20T02:19:05.6169473Z Receiving objects:  94% (261/277)
+2023-11-20T02:19:05.6170825Z Receiving objects:  95% (264/277)
+2023-11-20T02:19:05.6172169Z Receiving objects:  96% (266/277)
+2023-11-20T02:19:05.6172858Z Receiving objects:  97% (269/277)
+2023-11-20T02:19:05.6173673Z Receiving objects:  98% (272/277)
+2023-11-20T02:19:05.6174624Z Receiving objects:  99% (275/277)
+2023-11-20T02:19:05.6175427Z Receiving objects: 100% (277/277)
+2023-11-20T02:19:05.6176347Z Receiving objects: 100% (277/277), 774.89 KiB | 5.78 MiB/s, done.
+2023-11-20T02:19:05.6178807Z Resolving deltas:   0% (0/28)
+2023-11-20T02:19:05.6179514Z Resolving deltas:   3% (1/28)
+2023-11-20T02:19:05.6180108Z Resolving deltas:   7% (2/28)
+2023-11-20T02:19:05.6203350Z Resolving deltas:  10% (3/28)
+2023-11-20T02:19:05.6204137Z Resolving deltas:  14% (4/28)
+2023-11-20T02:19:05.6205913Z Resolving deltas:  17% (5/28)
+2023-11-20T02:19:05.6206732Z Resolving deltas:  21% (6/28)
+2023-11-20T02:19:05.6210675Z Resolving deltas:  25% (7/28)
+2023-11-20T02:19:05.6215691Z Resolving deltas:  28% (8/28)
+2023-11-20T02:19:05.6216578Z Resolving deltas:  32% (9/28)
+2023-11-20T02:19:05.6220726Z Resolving deltas:  35% (10/28)
+2023-11-20T02:19:05.6221366Z Resolving deltas:  39% (11/28)
+2023-11-20T02:19:05.6222135Z Resolving deltas:  42% (12/28)
+2023-11-20T02:19:05.6222832Z Resolving deltas:  46% (13/28)
+2023-11-20T02:19:05.6223407Z Resolving deltas:  50% (14/28)
+2023-11-20T02:19:05.6224175Z Resolving deltas:  53% (15/28)
+2023-11-20T02:19:05.6224865Z Resolving deltas:  57% (16/28)
+2023-11-20T02:19:05.6225503Z Resolving deltas:  60% (17/28)
+2023-11-20T02:19:05.6226222Z Resolving deltas:  64% (18/28)
+2023-11-20T02:19:05.6226861Z Resolving deltas:  67% (19/28)
+2023-11-20T02:19:05.6227456Z Resolving deltas:  71% (20/28)
+2023-11-20T02:19:05.6228190Z Resolving deltas:  75% (21/28)
+2023-11-20T02:19:05.6228865Z Resolving deltas:  78% (22/28)
+2023-11-20T02:19:05.6229434Z Resolving deltas:  82% (23/28)
+2023-11-20T02:19:05.6230177Z Resolving deltas:  85% (24/28)
+2023-11-20T02:19:05.6230790Z Resolving deltas:  89% (25/28)
+2023-11-20T02:19:05.6231678Z Resolving deltas:  92% (26/28)
+2023-11-20T02:19:05.6235179Z Resolving deltas:  96% (27/28)
+2023-11-20T02:19:05.6235868Z Resolving deltas: 100% (28/28)
+2023-11-20T02:19:05.6236500Z Resolving deltas: 100% (28/28), done.
+2023-11-20T02:19:05.6344975Z From https://github.com/AlphaSteam/axios-microprint-example
+2023-11-20T02:19:05.6346443Z  * [new ref]         2fec34afc2595046becf855557f7b8b787a38172 -> origin/microprint_test
+2023-11-20T02:19:05.6370038Z ##[endgroup]
+2023-11-20T02:19:05.6371105Z ##[group]Determining the checkout info
+2023-11-20T02:19:05.6372534Z ##[endgroup]
+2023-11-20T02:19:05.6373541Z ##[group]Checking out the ref
+2023-11-20T02:19:05.6378625Z [command]/usr/bin/git checkout --progress --force -B microprint_test refs/remotes/origin/microprint_test
+2023-11-20T02:19:05.6660583Z Switched to a new branch 'microprint_test'
+2023-11-20T02:19:05.6661624Z branch 'microprint_test' set up to track 'origin/microprint_test'.
+2023-11-20T02:19:05.6670049Z ##[endgroup]
+2023-11-20T02:19:05.6718718Z [command]/usr/bin/git log -1 --format='%H'
+2023-11-20T02:19:05.6751311Z '2fec34afc2595046becf855557f7b8b787a38172'
+2023-11-20T02:19:05.6760228Z ##[group]Removing auth
+2023-11-20T02:19:05.6764450Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-11-20T02:19:05.6802125Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-11-20T02:19:05.7048346Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-11-20T02:19:05.7079783Z http.https://github.com/.extraheader
+2023-11-20T02:19:05.7089189Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2023-11-20T02:19:05.7129186Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-11-20T02:19:05.7366427Z ##[endgroup]
+2023-11-20T02:19:05.7666258Z ##[group]Run actions/setup-node@v3
+2023-11-20T02:19:05.7666725Z with:
+2023-11-20T02:19:05.7667053Z   node-version: 12.x
+2023-11-20T02:19:05.7667397Z   cache: npm
+2023-11-20T02:19:05.7667803Z   always-auth: false
+2023-11-20T02:19:05.7668173Z   check-latest: false
+2023-11-20T02:19:05.7668746Z   token: ***
+2023-11-20T02:19:05.7669045Z ##[endgroup]
+2023-11-20T02:19:06.0313926Z Attempting to download 12.x...
+2023-11-20T02:19:06.4227824Z Acquiring 12.22.12 - x64 from https://github.com/actions/node-versions/releases/download/12.22.12-2103540415/node-12.22.12-linux-x64.tar.gz
+2023-11-20T02:19:06.7465517Z Extracting ...
+2023-11-20T02:19:06.7587447Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword -C /home/runner/work/_temp/fd5001b5-c780-4f36-bfd4-781905dc9c4a -f /home/runner/work/_temp/9350ed59-110e-4dfd-b66b-a04983d52ca6
+2023-11-20T02:19:07.3044710Z Adding to the cache ...
+2023-11-20T02:19:08.7982513Z ##[group]Environment details
+2023-11-20T02:19:09.0327248Z node: v12.22.12
+2023-11-20T02:19:09.0327951Z npm: 6.14.16
+2023-11-20T02:19:09.0338589Z yarn: 1.22.19
+2023-11-20T02:19:09.0340356Z ##[endgroup]
+2023-11-20T02:19:09.0342548Z [command]/opt/hostedtoolcache/node/12.22.12/x64/bin/npm config get cache
+2023-11-20T02:19:09.1725891Z /home/runner/.npm
+2023-11-20T02:19:09.2557285Z npm cache is not found
+2023-11-20T02:19:09.2754628Z ##[group]Run npm ci
+2023-11-20T02:19:09.2755106Z [36;1mnpm ci[0m
+2023-11-20T02:19:09.2816021Z shell: /usr/bin/bash -e {0}
+2023-11-20T02:19:09.2816425Z ##[endgroup]
+2023-11-20T02:19:21.2039660Z 
+2023-11-20T02:19:21.2050332Z > sinon@4.5.0 postinstall /home/runner/work/axios-microprint-example/axios-microprint-example/node_modules/sinon
+2023-11-20T02:19:21.2052523Z > node scripts/support-sinon.js
+2023-11-20T02:19:21.2053045Z 
+2023-11-20T02:19:21.2476580Z [32mHave some ❤️ for Sinon? You can support the project via Open Collective:[22m[39m
+2023-11-20T02:19:21.2477619Z  > [96m[1mhttps://opencollective.com/sinon/donate
+2023-11-20T02:19:21.2478319Z [0m
+2023-11-20T02:19:21.4571204Z 
+2023-11-20T02:19:21.4573656Z > core-js@3.22.2 postinstall /home/runner/work/axios-microprint-example/axios-microprint-example/node_modules/global-agent/node_modules/core-js
+2023-11-20T02:19:21.4576467Z > node -e "try{require('./postinstall')}catch(e){}"
+2023-11-20T02:19:21.4584525Z 
+2023-11-20T02:19:21.6286341Z 
+2023-11-20T02:19:21.6288958Z > core-js@2.6.12 postinstall /home/runner/work/axios-microprint-example/axios-microprint-example/node_modules/core-js
+2023-11-20T02:19:21.6291069Z > node -e "try{require('./postinstall')}catch(e){}"
+2023-11-20T02:19:21.6291752Z 
+2023-11-20T02:19:21.7465186Z 
+2023-11-20T02:19:21.7467785Z > fsevents@1.2.13 install /home/runner/work/axios-microprint-example/axios-microprint-example/node_modules/glob-watcher/node_modules/fsevents
+2023-11-20T02:19:21.7469483Z > node install.js
+2023-11-20T02:19:21.7469845Z 
+2023-11-20T02:19:21.7893044Z 
+2023-11-20T02:19:21.7903958Z Skipping 'fsevents' build as platform linux is not supported
+2023-11-20T02:19:21.8197140Z 
+2023-11-20T02:19:21.8199609Z > es5-ext@0.10.61 postinstall /home/runner/work/axios-microprint-example/axios-microprint-example/node_modules/es5-ext
+2023-11-20T02:19:21.8201561Z >  node -e "try{require('./_postinstall')}catch(e){}" || exit 0
+2023-11-20T02:19:21.8202063Z 
+2023-11-20T02:19:22.1072518Z 
+2023-11-20T02:19:22.1074627Z > axios@1.6.0 prepare /home/runner/work/axios-microprint-example/axios-microprint-example
+2023-11-20T02:19:22.1076214Z > husky install && npm run prepare:hooks
+2023-11-20T02:19:22.1076733Z 
+2023-11-20T02:19:22.1668045Z husky - Git hooks installed
+2023-11-20T02:19:22.3343562Z 
+2023-11-20T02:19:22.3345701Z > axios@1.6.0 prepare:hooks /home/runner/work/axios-microprint-example/axios-microprint-example
+2023-11-20T02:19:22.3347398Z > npx husky set .husky/commit-msg "npx commitlint --edit $1"
+2023-11-20T02:19:22.3348270Z 
+2023-11-20T02:19:22.3844328Z husky - created .husky/commit-msg
+2023-11-20T02:19:22.3942031Z added 1866 packages in 12.787s
+2023-11-20T02:19:22.4242575Z ##[group]Run npm test
+2023-11-20T02:19:22.4242955Z [36;1mnpm test[0m
+2023-11-20T02:19:22.4291426Z shell: /usr/bin/bash -e {0}
+2023-11-20T02:19:22.4291912Z ##[endgroup]
+2023-11-20T02:19:22.6000752Z 
+2023-11-20T02:19:22.6002962Z > axios@1.6.0 test /home/runner/work/axios-microprint-example/axios-microprint-example
+2023-11-20T02:19:22.6005187Z > npm run test:eslint && npm run test:mocha && npm run test:karma && npm run test:dtslint && npm run test:exports
+2023-11-20T02:19:22.6006368Z 
+2023-11-20T02:19:22.7721720Z 
+2023-11-20T02:19:22.7723758Z > axios@1.6.0 test:eslint /home/runner/work/axios-microprint-example/axios-microprint-example
+2023-11-20T02:19:22.7725516Z > node bin/ssl_hotfix.js eslint lib/**/*.js
+2023-11-20T02:19:22.7726172Z 
+2023-11-20T02:19:22.8114698Z Running eslint lib/adapters/adapters.js lib/adapters/http.js lib/adapters/xhr.js lib/cancel/CancelToken.js lib/cancel/CanceledError.js lib/cancel/isCancel.js lib/core/Axios.js lib/core/AxiosError.js lib/core/AxiosHeaders.js lib/core/InterceptorManager.js lib/core/buildFullPath.js lib/core/dispatchRequest.js lib/core/mergeConfig.js lib/core/settle.js lib/core/transformData.js lib/defaults/index.js lib/defaults/transitional.js lib/env/data.js lib/helpers/AxiosTransformStream.js lib/helpers/AxiosURLSearchParams.js lib/helpers/HttpStatusCode.js lib/helpers/ZlibHeaderTransformStream.js lib/helpers/bind.js lib/helpers/buildURL.js lib/helpers/callbackify.js lib/helpers/combineURLs.js lib/helpers/cookies.js lib/helpers/deprecatedMethod.js lib/helpers/formDataToJSON.js lib/helpers/formDataToStream.js lib/helpers/fromDataURI.js lib/helpers/isAbsoluteURL.js lib/helpers/isAxiosError.js lib/helpers/isURLSameOrigin.js lib/helpers/null.js lib/helpers/parseHeaders.js lib/helpers/parseProtocol.js lib/helpers/readBlob.js lib/helpers/speedometer.js lib/helpers/spread.js lib/helpers/throttle.js lib/helpers/toFormData.js lib/helpers/toURLEncodedForm.js lib/helpers/validator.js lib/platform/index.js on v12.22.12
+2023-11-20T02:19:22.8122291Z 
+2023-11-20T02:19:23.7742568Z 
+2023-11-20T02:19:23.7744514Z > axios@1.6.0 test:mocha /home/runner/work/axios-microprint-example/axios-microprint-example
+2023-11-20T02:19:23.7746510Z > node bin/ssl_hotfix.js mocha test/unit/**/*.js --timeout 30000 --exit
+2023-11-20T02:19:23.7747473Z 
+2023-11-20T02:19:23.8125913Z Running mocha test/unit/adapters/adapters.js test/unit/adapters/http.js test/unit/core/AxiosHeaders.js test/unit/defaults/transformReponse.js test/unit/helpers/fromDataURI.js test/unit/helpers/parseProtocol.js test/unit/regression/SNYK-JS-AXIOS-1038255.js test/unit/regression/bugs.js test/unit/utils/utils.js --timeout 30000 --exit on v12.22.12
+2023-11-20T02:19:23.8128442Z 
+2023-11-20T02:19:24.2067855Z 
+2023-11-20T02:19:24.2072634Z 
+2023-11-20T02:19:24.2077385Z   adapters
+2023-11-20T02:19:24.2088553Z     ✔ should support loading by fn handle
+2023-11-20T02:19:24.2092009Z     ✔ should support loading by name
+2023-11-20T02:19:24.2097960Z     ✔ should detect adapter unavailable status
+2023-11-20T02:19:24.2101200Z     ✔ should detect adapter unsupported status
+2023-11-20T02:19:24.2104197Z     ✔ should pick suitable adapter from the list
+2023-11-20T02:19:24.2105632Z 
+2023-11-20T02:19:24.2109536Z   supports http with nodejs
+2023-11-20T02:19:24.5203562Z     ✔ should throw an error if the timeout property is not parsable as a number (309ms)
+2023-11-20T02:19:34.8247712Z     ✔ should parse the timeout property (302ms)
+2023-11-20T02:19:35.1272532Z     ✔ should respect the timeout property (301ms)
+2023-11-20T02:19:35.4287101Z     ✔ should respect the timeoutErrorMessage property (301ms)
+2023-11-20T02:19:35.4333591Z     ✔ should allow passing JSON
+2023-11-20T02:19:35.4356194Z     ✔ should allow passing JSON with BOM
+2023-11-20T02:19:35.4395520Z     ✔ should redirect
+2023-11-20T02:19:35.4414895Z     ✔ should not redirect
+2023-11-20T02:19:35.4471411Z     ✔ should support max redirects
+2023-11-20T02:19:35.4492169Z     ✔ should support beforeRedirect
+2023-11-20T02:19:35.4624999Z     ✔ should support beforeRedirect and proxy with redirect
+2023-11-20T02:19:35.4651649Z     ✔ should preserve the HTTP verb on redirect
+2023-11-20T02:19:35.4707061Z     ✔ should support UTF8
+2023-11-20T02:19:35.4727187Z     ✔ should support basic auth
+2023-11-20T02:19:35.4745130Z     ✔ should support basic auth with a header
+2023-11-20T02:19:35.4762259Z     ✔ should provides a default User-Agent header
+2023-11-20T02:19:35.4778931Z     ✔ should allow the User-Agent header to be overridden
+2023-11-20T02:19:35.4797970Z     ✔ should allow the Content-Length header to be overridden
+2023-11-20T02:19:35.4816721Z     ✔ should support max content length
+2023-11-20T02:19:35.5843149Z     ✔ should support max content length for redirected (102ms)
+2023-11-20T02:19:35.6880984Z     ✔ should support max body length (103ms)
+2023-11-20T02:19:36.0201835Z     ✔ should properly support default max body length (follow-redirects as well) (331ms)
+2023-11-20T02:19:36.0214248Z     ✔ should display error while parsing params
+2023-11-20T02:19:36.0230464Z     ✔ should support sockets
+2023-11-20T02:19:36.0253848Z     ✔ should support buffers
+2023-11-20T02:19:36.0280338Z     ✔ should support HTTP proxies
+2023-11-20T02:19:36.0442596Z     ✔ should support HTTPS proxies
+2023-11-20T02:19:36.0460044Z     ✔ should not pass through disabled proxy
+2023-11-20T02:19:36.0484962Z     ✔ should support proxy set via env var
+2023-11-20T02:19:36.0563101Z     ✔ should support HTTPS proxy set via env var
+2023-11-20T02:19:36.0592247Z     ✔ should re-evaluate proxy on redirect when proxy set via env var
+2023-11-20T02:19:36.0609205Z     ✔ should not use proxy for domains in no_proxy
+2023-11-20T02:19:36.0634898Z     ✔ should use proxy for domains not in no_proxy
+2023-11-20T02:19:36.0660526Z     ✔ should support HTTP proxy auth
+2023-11-20T02:19:36.0696508Z     ✔ should support proxy auth from env
+2023-11-20T02:19:36.0726951Z     ✔ should support proxy auth with header
+2023-11-20T02:19:36.0743250Z     ✔ should support cancel
+2023-11-20T02:19:46.0768354Z     ✔ should combine baseURL and url
+2023-11-20T02:19:47.0792135Z     ✔ should support HTTP protocol (1001ms)
+2023-11-20T02:19:47.1507342Z     ✔ should support HTTPS protocol (71ms)
+2023-11-20T02:19:47.4525768Z     ✔ should return malformed URL (301ms)
+2023-11-20T02:19:47.7544543Z     ✔ should return unsupported protocol (302ms)
+2023-11-20T02:19:47.7563769Z     ✔ should supply a user-agent if one is not specified
+2023-11-20T02:19:47.7580035Z     ✔ should omit a user-agent if one is explicitly disclaimed
+2023-11-20T02:19:47.9615213Z     ✔ should throw an error if http server that aborts a chunked request (203ms)
+2023-11-20T02:19:47.9663631Z     ✔ should able to cancel multiple requests with CancelToken
+2023-11-20T02:19:47.9711006Z     ✔ should respect formSerializer config
+2023-11-20T02:19:47.9724899Z     ✔ should properly handle synchronous errors inside the adapter
+2023-11-20T02:19:47.9747529Z     ✔ should support function as paramsSerializer value
+2023-11-20T02:19:47.9755136Z     compression
+2023-11-20T02:19:47.9787806Z       ✔ should support transparent gunzip
+2023-11-20T02:19:47.9809525Z       ✔ should support gunzip error handling
+2023-11-20T02:19:47.9834826Z       ✔ should support disabling automatic decompression of response data
+2023-11-20T02:19:47.9838473Z       algorithms
+2023-11-20T02:19:47.9840713Z         gzip decompression
+2023-11-20T02:19:47.9860655Z           ✔ should support decompression
+2023-11-20T02:19:47.9883730Z           ✔ should not fail if response content-length header is missing (gzip)
+2023-11-20T02:19:47.9907089Z           ✔ should not fail with chunked responses (without Content-Length header)
+2023-11-20T02:19:47.9928346Z           ✔ should not fail with an empty response without content-length header (Z_BUF_ERROR)
+2023-11-20T02:19:47.9948162Z           ✔ should not fail with an empty response with content-length header (Z_BUF_ERROR)
+2023-11-20T02:19:47.9953127Z         GZIP decompression
+2023-11-20T02:19:47.9972812Z           ✔ should support decompression
+2023-11-20T02:19:47.9996542Z           ✔ should not fail if response content-length header is missing (GZIP)
+2023-11-20T02:19:48.0025718Z           ✔ should not fail with chunked responses (without Content-Length header)
+2023-11-20T02:19:48.0046268Z           ✔ should not fail with an empty response without content-length header (Z_BUF_ERROR)
+2023-11-20T02:19:48.0066051Z           ✔ should not fail with an empty response with content-length header (Z_BUF_ERROR)
+2023-11-20T02:19:48.0069026Z         compress decompression
+2023-11-20T02:19:48.0086959Z           ✔ should support decompression
+2023-11-20T02:19:48.0104933Z           ✔ should not fail if response content-length header is missing (compress)
+2023-11-20T02:19:48.0120467Z           ✔ should not fail with chunked responses (without Content-Length header)
+2023-11-20T02:19:48.0142383Z           ✔ should not fail with an empty response without content-length header (Z_BUF_ERROR)
+2023-11-20T02:19:48.0157010Z           ✔ should not fail with an empty response with content-length header (Z_BUF_ERROR)
+2023-11-20T02:19:48.0159364Z         deflate decompression
+2023-11-20T02:19:48.0176693Z           ✔ should support decompression
+2023-11-20T02:19:48.0193458Z           ✔ should not fail if response content-length header is missing (deflate)
+2023-11-20T02:19:48.0209587Z           ✔ should not fail with chunked responses (without Content-Length header)
+2023-11-20T02:19:48.0224922Z           ✔ should not fail with an empty response without content-length header (Z_BUF_ERROR)
+2023-11-20T02:19:48.0244738Z           ✔ should not fail with an empty response with content-length header (Z_BUF_ERROR)
+2023-11-20T02:19:48.0246174Z         deflate-raw decompression
+2023-11-20T02:19:48.0270156Z           ✔ should support decompression
+2023-11-20T02:19:48.0287264Z           ✔ should not fail if response content-length header is missing (deflate)
+2023-11-20T02:19:48.0304085Z           ✔ should not fail with chunked responses (without Content-Length header)
+2023-11-20T02:19:48.0319297Z           ✔ should not fail with an empty response without content-length header (Z_BUF_ERROR)
+2023-11-20T02:19:48.0334811Z           ✔ should not fail with an empty response with content-length header (Z_BUF_ERROR)
+2023-11-20T02:19:48.0337003Z         br decompression
+2023-11-20T02:19:48.0354931Z           ✔ should support decompression
+2023-11-20T02:19:48.0372533Z           ✔ should not fail if response content-length header is missing (br)
+2023-11-20T02:19:48.0399791Z           ✔ should not fail with chunked responses (without Content-Length header)
+2023-11-20T02:19:48.0415374Z           ✔ should not fail with an empty response without content-length header (Z_BUF_ERROR)
+2023-11-20T02:19:48.0430545Z           ✔ should not fail with an empty response with content-length header (Z_BUF_ERROR)
+2023-11-20T02:19:48.0432631Z     streams
+2023-11-20T02:19:48.0469241Z       ✔ should support streams
+2023-11-20T02:19:48.0480733Z       ✔ should pass errors for a failed stream
+2023-11-20T02:19:59.0504538Z pipeline error: CanceledError: Request stream has been aborted
+2023-11-20T02:19:59.0505830Z       ✔ should destroy the response stream with an error on request stream destroying (1002ms)
+2023-11-20T02:19:59.0511976Z Server warning: Premature close
+2023-11-20T02:19:59.0516237Z     different options for direct proxy configuration (without env variables)
+2023-11-20T02:19:59.0518188Z       ✔ hostname and trailing colon in protocol
+2023-11-20T02:19:59.0520571Z       ✔ hostname and no trailing colon in protocol
+2023-11-20T02:19:59.0522527Z       ✔ both hostname and host -> hostname takes precedence
+2023-11-20T02:19:59.0524347Z       ✔ only host and https protocol
+2023-11-20T02:19:59.0526090Z     FormData
+2023-11-20T02:19:59.0527273Z       form-data instance (https://www.npmjs.com/package/form-data)
+2023-11-20T02:19:59.0622945Z         ✔ should allow passing FormData
+2023-11-20T02:19:59.0627459Z       SpecCompliant FormData
+2023-11-20T02:19:59.0686970Z         ✔ should allow passing FormData
+2023-11-20T02:19:59.0690773Z       toFormData helper
+2023-11-20T02:19:59.0918215Z         ✔ should properly serialize nested objects for parsing with multer.js (express.js)
+2023-11-20T02:19:59.0922653Z     Blob
+2023-11-20T02:19:59.0948831Z       ✔ should support Blob
+2023-11-20T02:19:59.0952062Z     URLEncoded Form
+2023-11-20T02:19:59.1086265Z       ✔ should post object data as url-encoded form if content-type is application/x-www-form-urlencoded
+2023-11-20T02:19:59.1088795Z     Data URL
+2023-11-20T02:19:59.1103618Z       ✔ should support requesting data URL as a Buffer
+2023-11-20T02:19:59.1108473Z       - should support requesting data URL as a Blob (if supported by the environment)
+2023-11-20T02:19:59.1113712Z       ✔ should support requesting data URL as a String (text)
+2023-11-20T02:19:59.1119377Z       ✔ should support requesting data URL as a Stream
+2023-11-20T02:19:59.1120961Z     progress
+2023-11-20T02:19:59.1121568Z       upload
+2023-11-20T02:20:10.1266661Z         ✔ should support upload progress capturing (11014ms)
+2023-11-20T02:20:10.1268935Z       download
+2023-11-20T02:20:21.1429430Z         ✔ should support download progress capturing (11016ms)
+2023-11-20T02:20:21.1432678Z     Rate limit
+2023-11-20T02:20:30.6573310Z       ✔ should support upload rate limit (9514ms)
+2023-11-20T02:20:37.4083241Z ##[error]The operation was canceled.
+2023-11-20T02:20:37.4171323Z Post job cleanup.
+2023-11-20T02:20:37.5043580Z [command]/usr/bin/git version
+2023-11-20T02:20:37.5088460Z git version 2.42.0
+2023-11-20T02:20:37.5129677Z Temporarily overriding HOME='/home/runner/work/_temp/6dc5666a-9c96-4349-b523-117cd19cc045' before making global git config changes
+2023-11-20T02:20:37.5132451Z Adding repository directory to the temporary git global config as a safe directory
+2023-11-20T02:20:37.5139595Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/axios-microprint-example/axios-microprint-example
+2023-11-20T02:20:37.5184379Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2023-11-20T02:20:37.5222748Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2023-11-20T02:20:37.5466724Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2023-11-20T02:20:37.5505797Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2023-11-20T02:20:37.5982607Z Cleaning up orphan processes
+2023-11-20T02:20:37.6308201Z Terminate orphan process: pid (2196) (node)
+2023-11-20T02:20:37.6424390Z Terminate orphan process: pid (2207) (sh)
+2023-11-20T02:20:37.6533043Z Terminate orphan process: pid (2246) (node)
+2023-11-20T02:20:37.6640237Z Terminate orphan process: pid (2257) (sh)
+2023-11-20T02:20:37.6745944Z Terminate orphan process: pid (2258) (node)
+2023-11-20T02:20:37.7030503Z Terminate orphan process: pid (2269) (sh)
+2023-11-20T02:20:37.7109489Z Terminate orphan process: pid (2270) (node)
+2023-11-20T02:20:37.7188603Z Terminate orphan process: pid (2277) (node)

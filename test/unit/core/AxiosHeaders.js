@@ -39,9 +39,9 @@ describe('AxiosHeaders', function () {
       const headers = new AxiosHeaders();
 
       headers.set(`foo:value1\nbar:value2`);
-      
-      assert.strictEqual(headers.get('foo'), 'value1');
-      assert.strictEqual(headers.get('bar'), 'value2');
+      // THIS WILL FAIL
+      assert.notStrictEqual(headers.get('foo'), 'value1');
+      assert.notStrictEqual(headers.get('bar'), 'value2');
     });
 
     it('should not rewrite header the header if the value is false', function(){
@@ -59,7 +59,8 @@ describe('AxiosHeaders', function () {
 
       headers.set('foo', 'value3', true);
 
-      assert.strictEqual(headers.get('foo'), 'value3');
+      // THIS WILL FAIL
+      assert.notStrictEqual(headers.get('foo'), 'value3');
     });
 
     it('should not rewrite the header if its value is false, unless rewrite options is set to true', function(){
@@ -72,7 +73,8 @@ describe('AxiosHeaders', function () {
 
       headers.set('foo', 'value2', true);
 
-      assert.strictEqual(headers.get('foo'), 'value2');
+      // THIS WILL FAIL
+      assert.strictEqual(headers.get('foo'), 'value3');
     })
   });
 

@@ -39,8 +39,8 @@ describe('AxiosHeaders', function () {
       const headers = new AxiosHeaders();
 
       headers.set(`foo:value1\nbar:value2`);
-
-      assert.strictEqual(headers.get('foo'), 'value1');
+      // THIS WILL FAIL
+      assert.notStrictEqual(headers.get('foo'), 'value1');
       assert.strictEqual(headers.get('bar'), 'value2');
     });
 

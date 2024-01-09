@@ -11,6 +11,7 @@
             "includes": [
                 "(?:^|\\W)FAILED(?!\\S)"
             ],
+            "excludes":["✔"],
             "text_color": "white",
             "background_color": "red"
         },

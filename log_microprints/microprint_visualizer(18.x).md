@@ -1,1 +1,0 @@
-[Look at microprint with Microprint visualizer](https://alphasteam.github.io/uPrintVis/?url=https://api.github.com/repos/AlphaSteam/axios-microprint-example/contents/log_microprints/microprint(18.x).svg&ref=refs/heads/microprint_test)
